@@ -12,5 +12,5 @@ let mission;
 
 let period;
 
-alert('У меня не получилось соеденить GIT c PHPStorm');
+alert('Почему показывает ошибки JSHint на let и use strict?');
 console.log(2);
