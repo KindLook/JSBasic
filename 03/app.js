@@ -29,7 +29,7 @@ console.log(typeof (income));
 console.log(typeof (deposit));
 
 console.log(addExpenses.length);
-console.log("Период равен " + period + " месяцев");
+console.log('Период равен ' + period + ' месяцев');
 console.log(`Цель заработать ${mission} рублей`);
 
 addExpenses = addExpenses.toLowerCase();
@@ -40,17 +40,17 @@ console.log(addExpenses.split(', '));
  * @type {number}
  */
 let budgetMonth = money - (amount1 + amount1);
-console.log(budgetMonth);
+console.log('Бюджет на месяц: ' + budgetMonth);
 
 //7.сколько месяцев потребуется до достижения цели
-console.log(Math.ceil(mission / budgetMonth));
+console.log('Цель будет достигнута за ' + Math.ceil(mission / budgetMonth) + ' месяцев');
 
 /**
  * 8. бюджет на день учитывая обяз расходы в месяц
  * @type {number}
  */
 let budgetDay = Math.floor(budgetMonth / 30);
-console.log(budgetDay);
+console.log('Бюджет на день: ' + budgetDay);
 
 /*
 9)
