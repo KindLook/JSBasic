@@ -1,37 +1,69 @@
 'use strict';
 
+//"Доход за месяц"
+let money = +prompt('Ваш месячный доход?');
+
+//строка с доп доходом
+let income = "freelancing";
+
+
+//строка с перечислением доп расходов через запятую
+let addExpenses = prompt('Перечислите возможные расходы за рассчитываемый период через запятую');
+
+//булевое значение
+let deposit = confirm('Есть ли у вас депозит в банке?');
+
+//статьи расходов и во сколько это обойдется
+let expenses1 = prompt('Введите обязательную статью расходов');
+let amount1 = +prompt('Во сколько это обойдется?');
+let expenses2 = prompt('Введите обязательную статью расходов');
+let amount2 = +prompt('Во сколько это обойдется?');
+
+//желаемая сумма накоплений
+let mission = 500000;
+
+//число от 1 до 12 (месяцев)
+let period = 7;
+
 
 
 /**
- * 1.Функция возвращает сумму всех обязательных расходов за месяц
- * @param amount1
- * @param amount2
- * @returns {*}
+ * Функция возвращает сумму всех обязательных расходов за месяц
+ * @returns {number}
  */
-function getExpensesMonth(amount1, amount2){
+let getExpensesMonth = function (){
     return amount1 + amount2;
-}
-
-/**
- * 2.Функция возвращает Накопления за месяц (Доходы минус расходы)
- * @param money
- * @param ExpensesMonth
- * @returns {number}
- */
-function getAccumulatedMonth(money, ExpensesMonth){
-    return money - ExpensesMonth;
-}
+};
+// function getExpensesMonth(amount1, amount2){
+//     return amount1 + amount2;
+// }
 
 
 /**
- * 4. Подсчитывает за какой период будет достигнута цель, зная результат месячного накопления (accumulatedMonth) и возвращает результат
- * @param mission
- * @param accumulatedMonth
+ * Функция возвращает Накопления за месяц (Доходы минус расходы)
  * @returns {number}
  */
-function getTargetMonth(mission, accumulatedMonth){
+let getAccumulatedMonth = function (){
+    return money - getExpensesMonth();
+};
+
+// function getAccumulatedMonth(money, ExpensesMonth){
+//     return money - ExpensesMonth;
+// }
+
+/**
+ * 3.содержит результат функции getAccumulatedMonth, Накопления за месяц (Доходы минус расходы)
+ * @type {number}
+ */
+let accumulatedMonth = getAccumulatedMonth();
+
+/**
+ * Подсчитывает за какой период будет достигнута цель, зная результат месячного накопления (accumulatedMonth) и возвращает результат
+ * @returns {number}
+ */
+let getTargetMonth = function (){
     return Math.ceil(mission / accumulatedMonth);
-}
+};
 
 function  showTypeOf(){
     console.log(typeof (money));
@@ -62,47 +94,15 @@ function getStatusIncome(){
     }
 }
 
-/**
- * содержит результат функции getExpensesMonth сумму всех обязательных расходов за месяц
- * @type {*}
- */
-let expensesMonth = getExpensesMonth();
-/**
- * 3.содержит результат функции getAccumulatedMonth, Накопления за месяц (Доходы минус расходы)
- * @type {number}
- */
-let accumulatedMonth = getAccumulatedMonth();
 
-//"Доход за месяц"
-let money = +prompt('Ваш месячный доход?');
-
-//строка с доп доходом
-let income = "freelancing";
-
-//строка с перечислением доп расходов через запятую
-let addExpenses = prompt('Перечислите возможные расходы за рассчитываемый период через запятую');
-
-//булевое значение
-let deposit = confirm('Есть ли у вас депозит в банке?');
-
-//статьи расходов и во сколько это обойдется
-let expenses1 = prompt('Введите обязательную статью расходов');
-let amount1 = +prompt('Во сколько это обойдется?');
-let expenses2 = prompt('Введите обязательную статью расходов');
-let amount2 = +prompt('Во сколько это обойдется?');
-
-//желаемая сумма накоплений
-let mission = 500000;
-
-//число от 1 до 12 (месяцев)
-let period = 7;
 
 
 
 showTypeOf();
 
-getExpensesMonth(amount1, amount2);
+getExpensesMonth();
 
+//массив расходы, строка
 addExpenses = addExpenses.toLowerCase();
 console.log(addExpenses.split(', '));
 
