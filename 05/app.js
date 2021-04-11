@@ -1,8 +1,5 @@
 'use strict';
 
-/*Проверка на число. Если ничего не вводить или пробел - программа считает что это число 0.
-нужно исключить с выводом сообщения. Не получается - пропускает...
-*/
 
 /**
  * Проверка на число, n пытается преобразовать в число с точкой и спрашивает
@@ -11,17 +8,7 @@
  * @returns {boolean|boolean}
  */
 let isNumber = function (n){
-    if (n === ""){
-        alert("Вы ничего не вели");
-    }
-    if (n === " "){
-        alert("Вы ничего не вели");
-    }
-    if (n === null){
-        alert("Вы нажали отмена");
-    }
-
-    return !isNaN(parseFloat(n)) && isFinite(n);
+   return !isNaN(parseFloat(n)) && isFinite(n);
 };
 
 
@@ -46,11 +33,15 @@ let period = 7;
  */
 
 let start = function (){
-    do {
-        money = +prompt('Ваш месячный доход?');
-    }
-    while (!isNumber(money));
+    money = prompt('Ваш месячный доход?');
+    // do {
+    //     money = +prompt('Ваш месячный доход?');
+    // }
+    // while (!isNumber(money));
 
+    while (!isNumber(money)){
+        money = prompt('Ваш месячный доход?');
+    }
 };
 
 start();
@@ -80,7 +71,8 @@ let getExpensesMonth = function (){
         }
         while (!isNumber(sum));
     }
-console.log(expenses);
+    console.log(expenses);
+
     //возврат результата суммы расходов
     return sum;
 };
