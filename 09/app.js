@@ -31,9 +31,9 @@ let money,
                 do{
                     itemIncome = prompt('Какой у вас есть дополнительный заработок?', 'Таксую');
                 }
-                while (itemIncome === null || itemIncome === '' || itemIncome === number)
+                while (itemIncome === null || itemIncome === '');
                 let cashIncome = prompt('Сколько в месяц вы на этом зарабатываете?', 10000);
-                appData.income[itemIncome] = cashIncome;
+                appData.income[itemIncome] = +cashIncome;
             }
 
             let addExpenses = prompt('Перечислите возможные расходы за рассчитываемый период через запятую');
@@ -125,8 +125,37 @@ if(appData.getTargetMonth() > 0){
 
 console.log(appData.getStatusIncome());
 
-for(let key in appData){
-    console.log('Наша программа включает в себя данные: ' + key + ' - ' + appData[key]);
-}
+// for(let key in appData){
+//     console.log('Наша программа включает в себя данные: ' + key + ' - ' + appData[key]);
+// }
 
+//Кнопку "Рассчитать" через id
+let calculeteTotal = document.querySelector('#start');
 
+//Кнопки “+” (плюс) через Tag, каждую в своей переменной.
+let incomeAdd = document.querySelector('.income_add');
+let expensesAdd = document.querySelector('.expenses_add');
+
+//Чекбокс по id через querySelector
+let depositCheck = document.querySelector('#deposit-check');
+
+//Поля для ввода возможных доходов (additional_income-item) при помощи querySelectorAll
+let additionalIncomeItem = document.querySelectorAll('.additional_income-item');
+
+/*Каждый элемент в правой части программы через класс(не через querySelector),
+     которые имеют в имени класса "-value",
+    начиная с class="budget_day-value" и заканчивая class="target_month-value">
+ */
+let resultTotal = document.querySelectorAll('.result-total');
+
+/*
+Оставшиеся поля через querySelector каждый в отдельную переменную:
+  поля ввода (input) с левой стороны и не забудьте про range.
+*/
+let salaryAmount = document.querySelector('.salary-amount');
+let incomeTitle = document.querySelector('.income-title');
+let incomeAmount = document.querySelector('.income-amount');
+let expensesTitle = document.querySelector('.expenses-title');
+let expensesAmount = document.querySelector('.expenses-amount');
+let additionalExpensesItem = document.querySelector('.additional_expenses-item');
+let periodSelect = document.querySelector('.period-select');
