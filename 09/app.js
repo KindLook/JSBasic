@@ -130,11 +130,11 @@ console.log(appData.getStatusIncome());
 // }
 
 //Кнопку "Рассчитать" через id
-let calculeteTotal = document.querySelector('#start');
+let calculeteTotal = document.getElementById('#start');
 
 //Кнопки “+” (плюс) через Tag, каждую в своей переменной.
-let incomeAdd = document.querySelector('.income_add');
-let expensesAdd = document.querySelector('.expenses_add');
+let incomeAdd = document.getElementByTeg('button')[0];
+let expensesAdd = document.getElementByTeg('button')[1];
 
 //Чекбокс по id через querySelector
 let depositCheck = document.querySelector('#deposit-check');
