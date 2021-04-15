@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8b33b83d-23e2-4f40-bcc8-daf82b7ad9a9" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="lessen8" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1qXL30pydQCUPoVzrZfpL0ipQl1" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/09" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\пк\Desktop\Программирование\GLO\JSBasic" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\пк\Desktop\Программирование\GLO\JSBasic" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="app.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/03/app.js" working-dir="$PROJECT_DIR$/03">
+      <method v="2" />
+    </configuration>
+    <configuration name="app.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/09/app.js" working-dir="$PROJECT_DIR$/09">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.app.js" />
+        <item itemvalue="Node.js.app.js" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8b33b83d-23e2-4f40-bcc8-daf82b7ad9a9" name="Default Changelist" comment="" />
+      <created>1617220784827</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1617220784827</updated>
+      <workItem from="1617220785986" duration="9826000" />
+      <workItem from="1617313233741" duration="71375000" />
+      <workItem from="1618519985072" duration="54000" />
+    </task>
+    <task id="LOCAL-00001" summary="проба коментов">
+      <created>1617313339368</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1617313339368</updated>
+    </task>
+    <task id="LOCAL-00002" summary="ДЗ по первому уроку">
+      <created>1617313656896</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1617313656896</updated>
+    </task>
+    <task id="LOCAL-00003" summary="ДЗ по второму уроку (обязательное)">
+      <created>1617397596283</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1617397596283</updated>
+    </task>
+    <task id="LOCAL-00004" summary="ДЗ по второму уроку (обязательное)">
+      <created>1617400606120</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1617400606120</updated>
+    </task>
+    <task id="LOCAL-00005" summary="ДЗ по первому уроку (обязательное)">
+      <created>1617400755940</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1617400755940</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Ветка мастер, все почистил">
+      <created>1617401487191</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1617401487191</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Ветка 1, все почистил">
+      <created>1617401578299</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1617401578299</updated>
+    </task>
+    <task id="LOCAL-00008" summary="ДЗ по второму уроку (обязательное)">
+      <created>1617401736422</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1617401736422</updated>
+    </task>
+    <task id="LOCAL-00009" summary="ДЗ по третьему уроку (обязательное)">
+      <created>1617644215945</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1617644215945</updated>
+    </task>
+    <task id="LOCAL-00010" summary="ДЗ по третьему уроку (обязательное)">
+      <created>1617644485594</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1617644485594</updated>
+    </task>
+    <task id="LOCAL-00011" summary="ДЗ по третьему уроку (обязательное)&#10;поправлены бэктики и кавычки">
+      <created>1617645185500</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1617645185500</updated>
+    </task>
+    <task id="LOCAL-00012" summary="ДЗ по третьему уроку (дополнительное)">
+      <created>1617650151020</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1617650151021</updated>
+    </task>
+    <task id="LOCAL-00013" summary="ДЗ по четвертому уроку.">
+      <created>1617828214782</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1617828214782</updated>
+    </task>
+    <task id="LOCAL-00014" summary="ДЗ по четвертому уроку. Исправленное">
+      <created>1617860112830</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1617860112830</updated>
+    </task>
+    <task id="LOCAL-00015" summary="ДЗ по пятому уроку. С проверкой на число есть вопрос, написал в комментарии в начале программы">
+      <created>1618039265486</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1618039265486</updated>
+    </task>
+    <task id="LOCAL-00016" summary="ДЗ по пятому уроку.">
+      <created>1618131796498</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1618131796498</updated>
+    </task>
+    <task id="LOCAL-00017" summary="ДЗ по шестому уроку. Все работает. Не понял таки как замкнуть...">
+      <created>1618156205686</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1618156205686</updated>
+    </task>
+    <task id="LOCAL-00018" summary="ДЗ по седьмому уроку. запутался в объекте, не могу понять почему не срабатывает.">
+      <created>1618177475744</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1618177475745</updated>
+    </task>
+    <task id="LOCAL-00019" summary="ДЗ по восьмому уроку.">
+      <created>1618435757512</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1618435757512</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="проба коментов" />
+    <MESSAGE value="ДЗ по первому уроку" />
+    <MESSAGE value="ДЗ по первому уроку (обязательное)" />
+    <MESSAGE value="Ветка мастер, все почистил" />
+    <MESSAGE value="Ветка 1, все почистил" />
+    <MESSAGE value="ДЗ по второму уроку (обязательное)" />
+    <MESSAGE value="ДЗ по третьему уроку (обязательное)" />
+    <MESSAGE value="ДЗ по третьему уроку (обязательное)&#10;поправлены бэктики и кавычки" />
+    <MESSAGE value="ДЗ по третьему уроку (дополнительное)" />
+    <MESSAGE value="ДЗ по четвертому уроку." />
+    <MESSAGE value="ДЗ по четвертому уроку. Исправленное" />
+    <MESSAGE value="ДЗ по пятому уроку. С проверкой на число есть вопрос, написал в комментарии в начале программы" />
+    <MESSAGE value="ДЗ по пятому уроку." />
+    <MESSAGE value="ДЗ по шестому уроку. Все работает. Не понял таки как замкнуть..." />
+    <MESSAGE value="ДЗ по седьмому уроку. запутался в объекте, не могу понять почему не срабатывает." />
+    <MESSAGE value="ДЗ по восьмому уроку." />
+    <option name="LAST_COMMIT_MESSAGE" value="ДЗ по восьмому уроку." />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="155" y="0" key="#JSHint" timestamp="1617769393059">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="155" y="0" key="#JSHint/0.0.1366.728@0.0.1366.728" timestamp="1617769393059" />
+    <state x="133" y="13" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1617304807510">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="133" y="13" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1617304807510" />
+    <state x="410" y="63" key="FileChooserDialogImpl" timestamp="1618520037137">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="410" y="63" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1618520037137" />
+    <state x="479" y="245" key="Github.CreateGistDialog" timestamp="1617311513702">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="479" y="245" key="Github.CreateGistDialog/0.0.1366.728@0.0.1366.728" timestamp="1617311513702" />
+    <state width="1311" height="154" key="GridCell.Tab.0.bottom" timestamp="1617914510360">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1311" height="154" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1617914510360" />
+    <state width="1311" height="154" key="GridCell.Tab.0.center" timestamp="1617914510360">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1311" height="154" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1617914510360" />
+    <state width="1311" height="154" key="GridCell.Tab.0.left" timestamp="1617914510359">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1311" height="154" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1617914510359" />
+    <state width="1311" height="154" key="GridCell.Tab.0.right" timestamp="1617914510360">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1311" height="154" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1617914510360" />
+    <state x="77" y="0" key="SettingsEditor" timestamp="1617309520280">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="77" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1617309520280" />
+    <state x="175" y="35" key="Vcs.Push.Dialog.v2" timestamp="1618435765173">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="175" y="35" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1618435765173" />
+    <state x="46" y="0" width="710" height="728" key="find.popup" timestamp="1617221349964">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="46" y="0" width="710" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1617221349964" />
+    <state x="430" y="11" key="git4idea.branch.GitSmartOperationDialog" timestamp="1617768621012">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="430" y="11" key="git4idea.branch.GitSmartOperationDialog/0.0.1366.728@0.0.1366.728" timestamp="1617768621012" />
+    <state x="262" y="-1" key="search.everywhere.popup" timestamp="1617221316033">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="262" y="-1" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1617221316033" />
+  </component>
+</project>
