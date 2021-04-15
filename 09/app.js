@@ -133,8 +133,8 @@ console.log(appData.getStatusIncome());
 let calculeteTotal = document.getElementById('#start');
 
 //Кнопки “+” (плюс) через Tag, каждую в своей переменной.
-let incomeAdd = document.getElementByTeg('button')[0];
-let expensesAdd = document.getElementByTeg('button')[1];
+let incomeAdd = document.getElementsByTagName('button')[0];
+let expensesAdd = document.getElementsByTagName('button')[1];
 
 //Чекбокс по id через querySelector
 let depositCheck = document.querySelector('#deposit-check');
