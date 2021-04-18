@@ -10,6 +10,8 @@
 const book = document.querySelectorAll('.book');
 const ad = document.querySelector('.adv');
 
+console.log(book);
+
 book[5].after(book[2]);
 book[1].after(book[0]);
 book[0].after(book[4]);
@@ -21,3 +23,7 @@ document.body.style.backgroundImage = 'url(./image/you-dont-know-js.jpg)';
 book[4].innerHTML = '<h2><a href="https://github.com/azat-io/you-dont-know-js-ru/blob/master/this%20%26%20object%20prototypes/README.md#you-dont-know-js-this--object-prototypes" target="_blank">Книга 3. this и Прототипы Объектов</a></h2>';
 
 ad.remove();
+
+book[0].childNodes[3].children[3].after(book[0].childNodes[3].children[6]);
+book[0].childNodes[3].children[5].after(book[0].childNodes[3].children[8]);
+book[0].childNodes[3].children[4].after(book[0].childNodes[3].children[6]);
