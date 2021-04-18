@@ -27,3 +27,8 @@ ad.remove();
 book[0].childNodes[3].children[3].after(book[0].childNodes[3].children[6]);
 book[0].childNodes[3].children[5].after(book[0].childNodes[3].children[8]);
 book[0].childNodes[3].children[4].after(book[0].childNodes[3].children[6]);
+
+
+book[5].childNodes[3].children[3].before(book[5].childNodes[3].children[9]);
+book[5].childNodes[3].children[7].before(book[5].childNodes[3].children[2]);
+book[5].childNodes[3].children[9].before(book[5].childNodes[3].children[5]);
