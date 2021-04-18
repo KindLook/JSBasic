@@ -13,3 +13,5 @@ book[1].after(book[0]);
 book[0].after(book[4]);
 
 console.log(book);
+
+document.body.style.backgroundImage = 'url(./image/you-dont-know-js.jpg)';
