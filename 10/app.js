@@ -32,3 +32,8 @@ book[0].childNodes[3].children[4].after(book[0].childNodes[3].children[6]);
 book[5].childNodes[3].children[3].before(book[5].childNodes[3].children[9]);
 book[5].childNodes[3].children[7].before(book[5].childNodes[3].children[2]);
 book[5].childNodes[3].children[9].before(book[5].childNodes[3].children[5]);
+
+const newElem = document.createElement('li');
+newElem.textContent = 'Глава 8: За пределами ES6';
+book[2].childNodes[3].append(newElem);
+book[2].childNodes[3].children[9].before(book[2].childNodes[3].children[10]);
