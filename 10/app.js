@@ -7,3 +7,9 @@
 // Восстановить порядок глав во второй и пятой книге (внимательно инспектируйте индексы элементов, поможет dev tools)
 // в шестой книге добавить главу “Глава 8: За пределами ES6” и поставить её в правильное место
 
+const book = document.querySelectorAll('.book');
+book[5].after(book[2]);
+book[1].after(book[0]);
+book[0].after(book[4]);
+
+console.log(book);
