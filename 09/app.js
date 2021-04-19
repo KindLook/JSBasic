@@ -146,7 +146,13 @@ let additionalIncomeItem = document.querySelectorAll('.additional_income-item');
      которые имеют в имени класса "-value",
     начиная с class="budget_day-value" и заканчивая class="target_month-value">
  */
-let resultTotal = document.querySelectorAll('.result-total');
+
+let expenseMonthValue = document.getElementsByClassName('budget_day-value');
+let additionalIncomeValue = document.getElementsByClassName('additional_income-value');
+let additionalExpensesValue = document.getElementsByClassName('additional_expenses-value');
+let incomePeriodValue = document.getElementsByClassName('income_period-value');
+let targetMonthValue = document.getElementsByClassName('target_month-value');
+
 
 /*
 Оставшиеся поля через querySelector каждый в отдельную переменную:
