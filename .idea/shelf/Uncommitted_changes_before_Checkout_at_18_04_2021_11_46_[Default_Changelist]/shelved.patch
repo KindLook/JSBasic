@@ -1,0 +1,706 @@
+Index: 09/css/style.min.css
+===================================================================
+--- 09/css/style.min.css	(revision bcfda92f335a0cb745bd1fd3755e3e7002921eb0)
++++ 09/css/style.min.css	(revision bcfda92f335a0cb745bd1fd3755e3e7002921eb0)
+@@ -1,1 +0,0 @@
+-@font-face{font-family:Roboto;src:url(../font/Roboto-Bold.woff2) format("woff2"),url(../font/Roboto-Bold.woff) format("woff")}body{font-family:Roboto,sans-serif;color:#777;padding-top:40px}*{-webkit-box-sizing:border-box;box-sizing:border-box;margin:0;padding:0;outline:0}a,a:active,a:focus,a:hover,a:visited{text-decoration:none}.calc{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;max-width:90%;margin:auto;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}h1{color:#353a43;font-size:24px;font-weight:700;line-height:24px;text-align:center;margin-bottom:50px}.title{color:#353a43;font-size:18px;font-weight:700;line-height:24px;margin-top:15px}.title span{font-size:14px;color:#adb1ba}.data>div{padding-right:30px}.data input[type=text]{height:20px;padding:18px 16px;border:1px solid #ff7f63;margin:9px 30px 0 0;width:263px}.data input[type=text]::-webkit-input-placeholder{color:#ff7f63;font-size:14px;font-weight:700;line-height:24px}.data input[type=text]:-moz-placeholder{color:#ff7f63;font-size:14px;font-weight:700;line-height:24px}.data input[type=text]::-moz-placeholder{color:#ff7f63;font-size:14px;font-weight:700;line-height:24px}.data input[type=text]:-ms-input-placeholder{color:#ff7f63;font-size:14px;font-weight:700;line-height:24px}.data .btn_plus{width:30px;height:30px;text-align:center;line-height:30px;background-color:#ff7f63;color:#353a43;outline:0;border:none;font-size:26px;font-weight:700;cursor:pointer;margin-top:15px}.data .btn_plus:hover{-webkit-box-shadow:inset 2px 3px 7px rgba(0,0,0,.35);box-shadow:inset 2px 3px 7px rgba(0,0,0,.35)}.data .additional_expenses-item,.data .salary-amount{width:calc(100% - 30px)!important}.data .deposit-label{display:block;position:relative;padding-left:35px;margin-bottom:12px;cursor:pointer;font-size:22px;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.data .deposit-label input{position:absolute;opacity:0;cursor:pointer;height:0;width:0}.data .deposit-label .deposit-checkmark{position:absolute;top:0;left:0;height:23px;width:23px;background-color:#ff7f63}.data .deposit-label .deposit-checkmark:after{content:"";position:absolute;display:none;left:9px;top:5px;width:5px;height:10px;border:solid #353a43;border-width:0 3px 3px 0;-webkit-transform:rotate(45deg);transform:rotate(45deg)}.data .deposit-label:hover input~.deposit-checkmark{background-color:#ff7f63;-webkit-box-shadow:inset 2px 3px 7px rgba(0,0,0,.35);box-shadow:inset 2px 3px 7px rgba(0,0,0,.35)}.data .deposit-label input:checked~.deposit-checkmark:after{display:block}.data .deposit-bank{display:none;font-family:Roboto,sans-serif;font-size:14px;font-variant:small-caps;font-weight:700;color:#444;line-height:1.3;padding:.6em 1.4em .5em .8em;width:263px;max-width:100%;-webkit-box-sizing:border-box;box-sizing:border-box;margin:0;-webkit-box-shadow:inset 2px 3px 7px rgba(0,0,0,.35);box-shadow:inset 2px 3px 7px rgba(0,0,0,.35);border:1px solid #ff7f63;background-color:#ff7f63;cursor:pointer;-moz-appearance:none;-webkit-appearance:none;appearance:none;background-image:url(../img/arrow.svg);background-repeat:no-repeat,repeat;background-position:right .7em top 50%,0 0;background-size:20px auto,100%}.data .deposit-bank::-ms-expand{display:none}.data .deposit-bank:hover{border-color:#888}.data .deposit-bank:focus{border-color:#aaa;color:#222;outline:0}.data .deposit-bank option{font-weight:400}.data .deposit-amount,.data .deposit-percent{display:none}.data .target{display:-webkit-box;display:-ms-flexbox;display:flex}.data .target-title{margin:auto 10px auto auto}.data .target-amount{-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1}.data .period{text-align:center}.data .period-title{font-size:20px;text-align:center}.data .period input[type=range].period-select{-webkit-appearance:none;width:100%;margin:9px 0}.data .period input[type=range].period-select:focus{outline:0}.data .period input[type=range].period-select::-webkit-slider-runnable-track{width:100%;height:8px;cursor:pointer;background:#ff7f63;border-radius:25px;border:0 solid #000001}.data .period input[type=range].period-select::-webkit-slider-thumb{border:4px solid #353a43;height:26px;width:26px;border-radius:50px;background:#ff7f63;cursor:pointer;-webkit-appearance:none;margin-top:-9px}.data .period input[type=range].period-select:focus::-webkit-slider-runnable-track{background:#ff7f63}.data .period input[type=range].period-select::-moz-range-track{width:100%;height:8px;cursor:pointer;background:#ff7f63;border-radius:25px;border:0 solid #000001}.data .period input[type=range].period-select::-moz-range-thumb{border:4px solid #353a43;height:26px;width:26px;border-radius:50px;background:#ff7f63;cursor:pointer}.data .period input[type=range].period-select::-ms-track{width:100%;height:8px;cursor:pointer;background:0 0;border-color:transparent;color:transparent}.data .period input[type=range].period-select::-ms-fill-lower,.data .period input[type=range].period-select::-ms-fill-upper{background:#ff7f63;border:0 solid #000001;border-radius:50px}.data .period input[type=range].period-select::-ms-thumb{border:4px solid #353a43;width:26px;border-radius:50px;background:#ff7f63;cursor:pointer;height:8px}.data .period input[type=range].period-select:focus::-ms-fill-lower,.data .period input[type=range].period-select:focus::-ms-fill-upper{background:#ff7f63}.result{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-ms-flex-pack:distribute;justify-content:space-around}.result div{width:100%;-webkit-box-shadow:inset 2px 3px 7px rgba(0,0,0,.35);box-shadow:inset 2px 3px 7px rgba(0,0,0,.35);background-color:rgba(255,127,99,.26);color:#353a43;padding:15px 0 1px 20px;margin-bottom:15px}.result div span{display:block}.result div input{min-width:390px;margin-left:65px;padding-left:13px;border:none;outline:0;border-bottom:1px solid #ff7f63;color:#ff7f63;font-family:Roboto;font-size:14px;font-weight:700;background-color:transparent}.result div input::-webkit-input-placeholder{color:#ff7f63;font-size:14px;font-weight:700;line-height:24px}.result div input:-moz-placeholder{color:#ff7f63;font-size:14px;font-weight:700;line-height:24px}.result div input::-moz-placeholder{color:#ff7f63;font-size:14px;font-weight:700;line-height:24px}.result div input:-ms-input-placeholder{color:#ff7f63;font-size:14px;font-weight:700;line-height:24px}.result .title{margin-top:0}.result .control{background-color:transparent;-webkit-box-shadow:none;box-shadow:none;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;padding:0}.result #cancel{display:none}.result #cancel,.result #start{width:262px;height:67px;-webkit-box-shadow:inset 2px 3px 7px rgba(0,0,0,.35);box-shadow:inset 2px 3px 7px rgba(0,0,0,.35);background-color:#353a43;color:#fff;font-size:20px;font-family:Roboto;font-weight:700;line-height:24px;cursor:pointer;border:none;outline:transparent}.result #cancel:hover,.result #start:hover{opacity:.7}.result #cancel:active,.result #start:active{background-color:#ff7f63;color:#fff;opacity:1}
+\ No newline at end of file
+Index: 09/.jshintrc
+===================================================================
+--- 09/.jshintrc	(revision bcfda92f335a0cb745bd1fd3755e3e7002921eb0)
++++ 09/.jshintrc	(revision bcfda92f335a0cb745bd1fd3755e3e7002921eb0)
+@@ -1,19 +0,0 @@
+-{
+-	"camelcase" : true,
+-	"indent": 2,
+-	"undef": true,
+-	"quotmark": false,
+-	"maxlen": 120,
+-	"trailing": true,
+-	"curly": true,
+-	"strict": true,
+-	"browser": true,
+-	"devel": true,
+-	"jquery": true,
+-	"esversion": 6,
+-	"eqeqeq": true,
+-	"latedef": true,
+-	"noempty": true,
+-    "funcscope": true,
+-    "node": true
+-}
+Index: 09/index.html
+===================================================================
+--- 09/index.html	(revision bcfda92f335a0cb745bd1fd3755e3e7002921eb0)
++++ 09/index.html	(revision bcfda92f335a0cb745bd1fd3755e3e7002921eb0)
+@@ -1,134 +0,0 @@
+-<!doctype html>
+-<html lang="pl">
+-<head>
+-    <meta charset="UTF-8">
+-    <meta name="viewport"
+-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+-    <link rel="preload" href="./font/Roboto-Bold.woff2" as="font" type="font/woff2" crossorigin>
+-    <link rel="stylesheet" href="./css/style.min.css">
+-
+-    <title>Document</title>
+-</head>
+-<body>
+-<h1>Калькулятор личного бюджета</h1>
+-<section class="main">
+-
+-    <div class="calc">
+-
+-        <div class="data">
+-            <div class="salary">
+-                <div class="salary-title title">Месячный доход*</div>
+-                <input type="text" class="salary-amount" placeholder="Сумма">
+-            </div>
+-
+-            <div class="income">
+-                <div class="income-title title">Дополнительный доход</div>
+-                <div class="income-items">
+-                    <input type="text" class="income-title" placeholder="Наименование">
+-                    <input type="text" class="income-amount" placeholder="Сумма">
+-                </div>
+-
+-                <button class="btn_plus income_add">+</button>
+-            </div>
+-
+-            <div class="additional_income">
+-                <div class="additional_income-title title">Возможный доход</div>
+-                <input type="text" class="additional_income-item" placeholder="Наименование">
+-                <input type="text" class="additional_income-item" placeholder="Наименование">
+-            </div>
+-
+-            <div class="expenses">
+-                <div class="expenses-title title">Обязательные расходы</div>
+-                <div class="expenses-items">
+-                    <input type="text" class="expenses-title" placeholder="Наименование">
+-                    <input type="text" class="expenses-amount" placeholder="Сумма">
+-                </div>
+-
+-                <button class="btn_plus expenses_add">+</button>
+-            </div>
+-            <div class="additional_expenses">
+-                <div class="additional_expenses-title title">Возможные расходы <span>(перечислите через запятую)</span></div>
+-                <input type="text" class="additional_expenses-item" placeholder="название">
+-
+-            </div>
+-
+-            <div class="deposit">
+-                <label class="deposit-label title">Депозит
+-                    <input id="deposit-check" type="checkbox">
+-                    <span class="deposit-checkmark"></span>
+-                </label>
+-                <select class="deposit-bank">
+-                    <option value="">Процент</option>
+-                    <option value="4">Сбербанк</option>
+-                    <option value="5">Газпромбанк</option>
+-                    <option value="6">Тинькофф</option>
+-                    <option value="7">МТС Банк</option>
+-                    <option value="8">АбсолютБанк</option>
+-                    <option value="other">Другой</option>
+-                </select>
+-                <div class="deposit-calc">
+-                    <input type="text" class="deposit-amount" placeholder="Сумма">
+-                    <input type="text" class="deposit-percent" placeholder="Процент">
+-                </div>
+-            </div>
+-
+-            <div class="target">
+-                <span class="target-title title">Цель</span>
+-                <input type="text" class="target-amount" placeholder="Сумма">
+-            </div>
+-
+-            <div class="period">
+-                <div class="title period-title">Период расчета</div>
+-                <input class="period-select" type="range" step="1" min="1" max="12" value="1">
+-                <div class="title period-amount">1</div>
+-            </div>
+-
+-        </div>
+-
+-        <div class="result">
+-            <div class="result-budget_month">
+-                <span class="title">Доход за месяц</span>
+-                <input type="text" class="result-total budget_month-value" placeholder="0" disabled>
+-            </div>
+-            <div class="result-budget_day">
+-                <span class="title">Дневной бюджет</span>
+-                <input type="text" class="result-total budget_day-value" placeholder="0">
+-            </div>
+-
+-            <div class="result-expenses_month">
+-                <span class="title">Расход за месяц</span>
+-                <input type="text" class="result-total expenses_month-value" placeholder="0" disabled>
+-            </div>
+-            <div class="result-additional_income">
+-                <span class="title">Возможные доходы</span>
+-                <input type="text" class="result-total additional_income-value" placeholder="Наименования" disabled>
+-            </div>
+-            <div class="result-additional_expenses">
+-                <span class="title">Возможные расходы</span>
+-                <input type="text" class="result-total additional_expenses-value" placeholder="Наименования" disabled>
+-            </div>
+-
+-            <div class="result-income_period">
+-                <span class="title">Накопления за период</span>
+-                <input type="text" class="result-total income_period-value" placeholder="0" disabled>
+-            </div>
+-            <div class="result-target_month">
+-                <span class="title">Срок достижения цели в месяцах</span>
+-                <input type="text" class="result-total target_month-value" placeholder="Срок" disabled>
+-            </div>
+-            <div class="control">
+-                <button id="start">Рассчитать</button>
+-                <button id="cancel">Сбросить</button>
+-            </div>
+-        </div>
+-
+-
+-    </div>
+-
+-
+-</section>
+-<!--<script src="./script/oop.js"></script>-->
+-<script src="app.js"></script>
+-</body>
+-</html>
+\ No newline at end of file
+Index: 09/app.js
+===================================================================
+--- 09/app.js	(revision bcfda92f335a0cb745bd1fd3755e3e7002921eb0)
++++ 09/app.js	(revision bcfda92f335a0cb745bd1fd3755e3e7002921eb0)
+@@ -1,161 +0,0 @@
+-'use strict';
+-
+-//"Доход за месяц"
+-let money,
+-    start = function (){
+-        do {
+-            money = prompt('Ваш месячный доход?', 80000 );
+-        }
+-        while (isNaN(money) || money === '' || money === null);
+-        };
+-
+-    start();
+-
+-    let appData = {
+-        budget: money,
+-        budgetDay: 0,
+-        budgetMonth: 0,
+-        income: {},
+-        addIncome: [],
+-        expenses: [],
+-        addExpenses: [],
+-        deposit: false,
+-        percentDeposit: 0,
+-        moneyDeposit: 0,
+-        mission: 50000,
+-        period: 7,
+-
+-        asking: function (){
+-            if(confirm('Есть ли у вас дополнительный заработок?')){
+-                let itemIncome;
+-                do{
+-                    itemIncome = prompt('Какой у вас есть дополнительный заработок?', 'Таксую');
+-                }
+-                while (itemIncome === null || itemIncome === '');
+-                let cashIncome = prompt('Сколько в месяц вы на этом зарабатываете?', 10000);
+-                appData.income[itemIncome] = +cashIncome;
+-            }
+-
+-            let addExpenses = prompt('Перечислите возможные расходы за рассчитываемый период через запятую');
+-                appData.addExpenses = addExpenses.toLowerCase().split(',');
+-
+-                for(let i = 0; i< 2; i++){
+-                    let itemExpenses = prompt('Введите обязательную статью расходов');
+-                    let cashExpenses;
+-                    do{
+-                        cashExpenses = prompt('Во сколько это обойдется?');
+-                    }
+-                    while (isNaN(cashExpenses) || cashExpenses === '' || cashExpenses === null);
+-                    appData.expenses[itemExpenses] = +cashExpenses;
+-                }
+-                },
+-        getInfoDeposit: function (){
+-            appData.deposit = confirm('Есть ли у вас депозит в банке?');
+-            if(appData.deposit){
+-                appData.persenDeposit = prompt('Какой годовой процент?', '10');
+-                appData.moneyDeposit = prompt('Какая сумма заложена?', 10000);
+-            }
+-        },
+-        /**
+-         * Расходы за месяц
+-         * @returns {number}
+-         */
+-        getExpensesMonth: function(){
+-                   for (let key in appData.expenses){
+-                        appData.expensesMonth += appData.expenses[key];
+-                    }
+-                },
+-
+-        /**
+-         * Функция возвращает Накопления за месяц (Доходы минус расходы)
+-         * @returns {number}
+-         */
+-        getBudget: function () {
+-            appData.budgetMonth = appData.budget - appData.expensesMonth;
+-            appData.budgetDay = Math.floor(appData.budgetMonth / 30);
+-        },
+-
+-        /**
+-         * Подсчитывает за какой период будет достигнута цель, зная результат месячного накопления (getAccumulatedMonth) и возвращает результат
+-         * @returns {number}
+-         */
+-        getTargetMonth: function (){
+-            return appData.mission / appData.budgetMonth;
+-        },
+-
+-        /**
+-         * Если budgetDay больше 1200, то “У вас высокий уровень дохода”
+-
+-         Если budgetDay больше 600 и меньше 1200, то сообщение “У вас средний уровень дохода”
+-
+-         Если budgetDay меньше 600 и больше 0 то в консоль вывести сообщение “К сожалению у вас уровень дохода ниже среднего”
+-
+-         Если отрицательное значение то вывести “Что то пошло не так”
+-
+-         Учесть варианты 0, 600 и 1200 (к какому уровню не важно)
+-         */
+-        getStatusIncome: function(){
+-            if (appData.budgetDay > 1200){
+-                return ('У вас высокий уровень дохода');
+-            }else if (600 < appData.budgetDay < 1200){
+-                return (('У вас средний уровень дохода'));
+-            }else if(0 < appData.budgetDay < 600){
+-                return ('К сожалению у вас уровень дохода ниже среднего');
+-            }else {
+-                return('Что-то пошло не так!');
+-            }
+-        },
+-
+-        calcSavedMoney: function (){
+-            return appData.budgetMonth * appData.period;
+-        }
+-    };
+-appData.asking();
+-appData.getExpensesMonth();
+-appData.getBudget();
+-
+-
+-console.log('Расходы за месяц: ' + appData.expensesMonth);
+-
+-if(appData.getTargetMonth() > 0){
+-    console.log('Цель будет достигнута за ' + Math.ceil(appData.getTargetMonth()) + ' месяца');
+-} else {
+-    console.log('Цель не будет достигнута');
+-}
+-
+-console.log(appData.getStatusIncome());
+-
+-// for(let key in appData){
+-//     console.log('Наша программа включает в себя данные: ' + key + ' - ' + appData[key]);
+-// }
+-
+-//Кнопку "Рассчитать" через id
+-let calculeteTotal = document.getElementById('#start');
+-
+-//Кнопки “+” (плюс) через Tag, каждую в своей переменной.
+-let incomeAdd = document.getElementsByTagName('button')[0];
+-let expensesAdd = document.getElementsByTagName('button')[1];
+-
+-//Чекбокс по id через querySelector
+-let depositCheck = document.querySelector('#deposit-check');
+-
+-//Поля для ввода возможных доходов (additional_income-item) при помощи querySelectorAll
+-let additionalIncomeItem = document.querySelectorAll('.additional_income-item');
+-
+-/*Каждый элемент в правой части программы через класс(не через querySelector),
+-     которые имеют в имени класса "-value",
+-    начиная с class="budget_day-value" и заканчивая class="target_month-value">
+- */
+-let resultTotal = document.querySelectorAll('.result-total');
+-
+-/*
+-Оставшиеся поля через querySelector каждый в отдельную переменную:
+-  поля ввода (input) с левой стороны и не забудьте про range.
+-*/
+-let salaryAmount = document.querySelector('.salary-amount');
+-let incomeTitle = document.querySelector('.income-title');
+-let incomeAmount = document.querySelector('.income-amount');
+-let expensesTitle = document.querySelector('.expenses-title');
+-let expensesAmount = document.querySelector('.expenses-amount');
+-let additionalExpensesItem = document.querySelector('.additional_expenses-item');
+-let periodSelect = document.querySelector('.period-select');
+Index: 09/img/arrow.svg
+===================================================================
+--- 09/img/arrow.svg	(revision bcfda92f335a0cb745bd1fd3755e3e7002921eb0)
++++ 09/img/arrow.svg	(revision bcfda92f335a0cb745bd1fd3755e3e7002921eb0)
+@@ -1,1 +0,0 @@
+-<svg xmlns="http://www.w3.org/2000/svg" width="31" height="28"><defs><mask id="pmq9b" width="2" height="2" x="-1" y="-1"><path fill="#fff" d="M4 3h20v18H4z"/><path d="M14.393 20.75L23.92 3.91a.697.697 0 0 0 .03-.6c-.082-.19-.244-.31-.422-.31H4.476c-.178 0-.34.12-.422.31a.69.69 0 0 0 .03.6l9.526 16.84a.46.46 0 0 0 .392.25.459.459 0 0 0 .391-.25z"/></mask><filter id="pmq9a" width="55.5" height="54.6" x="-13" y="-14" filterUnits="userSpaceOnUse"><feOffset dx="1.5" dy="2.6" in="SourceGraphic" result="FeOffset1023Out"/><feGaussianBlur in="FeOffset1023Out" result="FeGaussianBlur1024Out" stdDeviation="2.8 2.8"/></filter></defs><g filter="url(#pmq9a)"><path fill="none" d="M14.393 20.75L23.92 3.91a.697.697 0 0 0 .03-.6c-.082-.19-.244-.31-.422-.31H4.476c-.178 0-.34.12-.422.31a.69.69 0 0 0 .03.6l9.526 16.84a.46.46 0 0 0 .392.25.459.459 0 0 0 .391-.25z" mask="url(&quot;#pmq9b&quot;)"/><path fill-opacity=".29" d="M14.393 20.75L23.92 3.91a.697.697 0 0 0 .03-.6c-.082-.19-.244-.31-.422-.31H4.476c-.178 0-.34.12-.422.31a.69.69 0 0 0 .03.6l9.526 16.84a.46.46 0 0 0 .392.25.459.459 0 0 0 .391-.25z"/></g><path fill="#353a43" d="M14.393 20.75L23.92 3.91a.697.697 0 0 0 .03-.6c-.082-.19-.244-.31-.422-.31H4.476c-.178 0-.34.12-.422.31a.69.69 0 0 0 .03.6l9.526 16.84a.46.46 0 0 0 .392.25.459.459 0 0 0 .391-.25z"/></svg>
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"BranchesTreeState\">\r\n    <expand>\r\n      <path>\r\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n        <item name=\"LOCAL_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n      </path>\r\n    </expand>\r\n    <select />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"8b33b83d-23e2-4f40-bcc8-daf82b7ad9a9\" name=\"Default Changelist\" comment=\"\" />\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"ComposerSettings\">\r\n    <execution />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"HTML File\" />\r\n        <option value=\"JavaScript File\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"lessen8\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"1qXL30pydQCUPoVzrZfpL0ipQl1\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">\r\n    <property name=\"DefaultHtmlFileTemplate\" value=\"HTML File\" />\r\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\r\n    <property name=\"WebServerToolWindowFactoryState\" value=\"false\" />\r\n    <property name=\"last_opened_file_path\" value=\"$PROJECT_DIR$/09\" />\r\n    <property name=\"node.js.detected.package.eslint\" value=\"true\" />\r\n    <property name=\"node.js.detected.package.tslint\" value=\"true\" />\r\n    <property name=\"node.js.path.for.package.eslint\" value=\"project\" />\r\n    <property name=\"node.js.path.for.package.tslint\" value=\"project\" />\r\n    <property name=\"node.js.selected.package.eslint\" value=\"(autodetect)\" />\r\n    <property name=\"node.js.selected.package.tslint\" value=\"(autodetect)\" />\r\n    <property name=\"nodejs_package_manager_path\" value=\"npm\" />\r\n    <property name=\"settings.editor.selected.configurable\" value=\"vcs.Git\" />\r\n    <property name=\"vue.rearranger.settings.migration\" value=\"true\" />\r\n  </component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\пк\\Desktop\\Программирование\\GLO\\JSBasic\" />\r\n    </key>\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\пк\\Desktop\\Программирование\\GLO\\JSBasic\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\">\r\n    <configuration name=\"app.js\" type=\"NodeJSConfigurationType\" temporary=\"true\" nameIsGenerated=\"true\" path-to-js-file=\"$PROJECT_DIR$/03/app.js\" working-dir=\"$PROJECT_DIR$/03\">\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"app.js\" type=\"NodeJSConfigurationType\" temporary=\"true\" nameIsGenerated=\"true\" path-to-js-file=\"$PROJECT_DIR$/09/app.js\" working-dir=\"$PROJECT_DIR$/09\">\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Node.js.app.js\" />\r\n        <item itemvalue=\"Node.js.app.js\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"8b33b83d-23e2-4f40-bcc8-daf82b7ad9a9\" name=\"Default Changelist\" comment=\"\" />\r\n      <created>1617220784827</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1617220784827</updated>\r\n      <workItem from=\"1617220785986\" duration=\"9826000\" />\r\n      <workItem from=\"1617313233741\" duration=\"71375000\" />\r\n      <workItem from=\"1618519985072\" duration=\"54000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"проба коментов\">\r\n      <created>1617313339368</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1617313339368</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"ДЗ по первому уроку\">\r\n      <created>1617313656896</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1617313656896</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"ДЗ по второму уроку (обязательное)\">\r\n      <created>1617397596283</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1617397596283</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"ДЗ по второму уроку (обязательное)\">\r\n      <created>1617400606120</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1617400606120</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"ДЗ по первому уроку (обязательное)\">\r\n      <created>1617400755940</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1617400755940</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"Ветка мастер, все почистил\">\r\n      <created>1617401487191</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1617401487191</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"Ветка 1, все почистил\">\r\n      <created>1617401578299</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1617401578299</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00008\" summary=\"ДЗ по второму уроку (обязательное)\">\r\n      <created>1617401736422</created>\r\n      <option name=\"number\" value=\"00008\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1617401736422</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00009\" summary=\"ДЗ по третьему уроку (обязательное)\">\r\n      <created>1617644215945</created>\r\n      <option name=\"number\" value=\"00009\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1617644215945</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00010\" summary=\"ДЗ по третьему уроку (обязательное)\">\r\n      <created>1617644485594</created>\r\n      <option name=\"number\" value=\"00010\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00010\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1617644485594</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00011\" summary=\"ДЗ по третьему уроку (обязательное)&#10;поправлены бэктики и кавычки\">\r\n      <created>1617645185500</created>\r\n      <option name=\"number\" value=\"00011\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00011\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1617645185500</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00012\" summary=\"ДЗ по третьему уроку (дополнительное)\">\r\n      <created>1617650151020</created>\r\n      <option name=\"number\" value=\"00012\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00012\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1617650151021</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00013\" summary=\"ДЗ по четвертому уроку.\">\r\n      <created>1617828214782</created>\r\n      <option name=\"number\" value=\"00013\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00013\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1617828214782</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00014\" summary=\"ДЗ по четвертому уроку. Исправленное\">\r\n      <created>1617860112830</created>\r\n      <option name=\"number\" value=\"00014\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00014\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1617860112830</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00015\" summary=\"ДЗ по пятому уроку. С проверкой на число есть вопрос, написал в комментарии в начале программы\">\r\n      <created>1618039265486</created>\r\n      <option name=\"number\" value=\"00015\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00015\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1618039265486</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00016\" summary=\"ДЗ по пятому уроку.\">\r\n      <created>1618131796498</created>\r\n      <option name=\"number\" value=\"00016\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00016\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1618131796498</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00017\" summary=\"ДЗ по шестому уроку. Все работает. Не понял таки как замкнуть...\">\r\n      <created>1618156205686</created>\r\n      <option name=\"number\" value=\"00017\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00017\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1618156205686</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00018\" summary=\"ДЗ по седьмому уроку. запутался в объекте, не могу понять почему не срабатывает.\">\r\n      <created>1618177475744</created>\r\n      <option name=\"number\" value=\"00018\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00018\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1618177475745</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00019\" summary=\"ДЗ по восьмому уроку.\">\r\n      <created>1618435757512</created>\r\n      <option name=\"number\" value=\"00019\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00019\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1618435757512</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"20\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n    <option name=\"oldMeFiltersMigrated\" value=\"true\" />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"проба коментов\" />\r\n    <MESSAGE value=\"ДЗ по первому уроку\" />\r\n    <MESSAGE value=\"ДЗ по первому уроку (обязательное)\" />\r\n    <MESSAGE value=\"Ветка мастер, все почистил\" />\r\n    <MESSAGE value=\"Ветка 1, все почистил\" />\r\n    <MESSAGE value=\"ДЗ по второму уроку (обязательное)\" />\r\n    <MESSAGE value=\"ДЗ по третьему уроку (обязательное)\" />\r\n    <MESSAGE value=\"ДЗ по третьему уроку (обязательное)&#10;поправлены бэктики и кавычки\" />\r\n    <MESSAGE value=\"ДЗ по третьему уроку (дополнительное)\" />\r\n    <MESSAGE value=\"ДЗ по четвертому уроку.\" />\r\n    <MESSAGE value=\"ДЗ по четвертому уроку. Исправленное\" />\r\n    <MESSAGE value=\"ДЗ по пятому уроку. С проверкой на число есть вопрос, написал в комментарии в начале программы\" />\r\n    <MESSAGE value=\"ДЗ по пятому уроку.\" />\r\n    <MESSAGE value=\"ДЗ по шестому уроку. Все работает. Не понял таки как замкнуть...\" />\r\n    <MESSAGE value=\"ДЗ по седьмому уроку. запутался в объекте, не могу понять почему не срабатывает.\" />\r\n    <MESSAGE value=\"ДЗ по восьмому уроку.\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"ДЗ по восьмому уроку.\" />\r\n  </component>\r\n  <component name=\"WindowStateProjectService\">\r\n    <state x=\"155\" y=\"0\" key=\"#JSHint\" timestamp=\"1617769393059\">\r\n      <screen x=\"0\" y=\"0\" width=\"1366\" height=\"728\" />\r\n    </state>\r\n    <state x=\"155\" y=\"0\" key=\"#JSHint/0.0.1366.728@0.0.1366.728\" timestamp=\"1617769393059\" />\r\n    <state x=\"133\" y=\"13\" key=\"#com.intellij.execution.impl.EditConfigurationsDialog\" timestamp=\"1617304807510\">\r\n      <screen x=\"0\" y=\"0\" width=\"1366\" height=\"728\" />\r\n    </state>\r\n    <state x=\"133\" y=\"13\" key=\"#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728\" timestamp=\"1617304807510\" />\r\n    <state x=\"410\" y=\"63\" key=\"FileChooserDialogImpl\" timestamp=\"1618520037137\">\r\n      <screen x=\"0\" y=\"0\" width=\"1366\" height=\"728\" />\r\n    </state>\r\n    <state x=\"410\" y=\"63\" key=\"FileChooserDialogImpl/0.0.1366.728@0.0.1366.728\" timestamp=\"1618520037137\" />\r\n    <state x=\"479\" y=\"245\" key=\"Github.CreateGistDialog\" timestamp=\"1617311513702\">\r\n      <screen x=\"0\" y=\"0\" width=\"1366\" height=\"728\" />\r\n    </state>\r\n    <state x=\"479\" y=\"245\" key=\"Github.CreateGistDialog/0.0.1366.728@0.0.1366.728\" timestamp=\"1617311513702\" />\r\n    <state width=\"1311\" height=\"154\" key=\"GridCell.Tab.0.bottom\" timestamp=\"1617914510360\">\r\n      <screen x=\"0\" y=\"0\" width=\"1366\" height=\"728\" />\r\n    </state>\r\n    <state width=\"1311\" height=\"154\" key=\"GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728\" timestamp=\"1617914510360\" />\r\n    <state width=\"1311\" height=\"154\" key=\"GridCell.Tab.0.center\" timestamp=\"1617914510360\">\r\n      <screen x=\"0\" y=\"0\" width=\"1366\" height=\"728\" />\r\n    </state>\r\n    <state width=\"1311\" height=\"154\" key=\"GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728\" timestamp=\"1617914510360\" />\r\n    <state width=\"1311\" height=\"154\" key=\"GridCell.Tab.0.left\" timestamp=\"1617914510359\">\r\n      <screen x=\"0\" y=\"0\" width=\"1366\" height=\"728\" />\r\n    </state>\r\n    <state width=\"1311\" height=\"154\" key=\"GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728\" timestamp=\"1617914510359\" />\r\n    <state width=\"1311\" height=\"154\" key=\"GridCell.Tab.0.right\" timestamp=\"1617914510360\">\r\n      <screen x=\"0\" y=\"0\" width=\"1366\" height=\"728\" />\r\n    </state>\r\n    <state width=\"1311\" height=\"154\" key=\"GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728\" timestamp=\"1617914510360\" />\r\n    <state x=\"77\" y=\"0\" key=\"SettingsEditor\" timestamp=\"1617309520280\">\r\n      <screen x=\"0\" y=\"0\" width=\"1366\" height=\"728\" />\r\n    </state>\r\n    <state x=\"77\" y=\"0\" key=\"SettingsEditor/0.0.1366.728@0.0.1366.728\" timestamp=\"1617309520280\" />\r\n    <state x=\"175\" y=\"35\" key=\"Vcs.Push.Dialog.v2\" timestamp=\"1618435765173\">\r\n      <screen x=\"0\" y=\"0\" width=\"1366\" height=\"728\" />\r\n    </state>\r\n    <state x=\"175\" y=\"35\" key=\"Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728\" timestamp=\"1618435765173\" />\r\n    <state x=\"46\" y=\"0\" width=\"710\" height=\"728\" key=\"find.popup\" timestamp=\"1617221349964\">\r\n      <screen x=\"0\" y=\"0\" width=\"1366\" height=\"728\" />\r\n    </state>\r\n    <state x=\"46\" y=\"0\" width=\"710\" height=\"728\" key=\"find.popup/0.0.1366.728@0.0.1366.728\" timestamp=\"1617221349964\" />\r\n    <state x=\"430\" y=\"11\" key=\"git4idea.branch.GitSmartOperationDialog\" timestamp=\"1617768621012\">\r\n      <screen x=\"0\" y=\"0\" width=\"1366\" height=\"728\" />\r\n    </state>\r\n    <state x=\"430\" y=\"11\" key=\"git4idea.branch.GitSmartOperationDialog/0.0.1366.728@0.0.1366.728\" timestamp=\"1617768621012\" />\r\n    <state x=\"262\" y=\"-1\" key=\"search.everywhere.popup\" timestamp=\"1617221316033\">\r\n      <screen x=\"0\" y=\"0\" width=\"1366\" height=\"728\" />\r\n    </state>\r\n    <state x=\"262\" y=\"-1\" key=\"search.everywhere.popup/0.0.1366.728@0.0.1366.728\" timestamp=\"1617221316033\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/workspace.xml	(revision bcfda92f335a0cb745bd1fd3755e3e7002921eb0)
++++ .idea/workspace.xml	(date 1618735487901)
+@@ -6,11 +6,30 @@
+         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+       </path>
++      <path>
++        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
++        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
++      </path>
++      <path>
++        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
++        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
++        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
++      </path>
+     </expand>
+     <select />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="8b33b83d-23e2-4f40-bcc8-daf82b7ad9a9" name="Default Changelist" comment="" />
++    <list default="true" id="d662d04c-380a-4337-ad2e-37b15ea0f8fc" name="Default Changelist" comment="">
++      <change afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/09/.jshintrc" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/09/app.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/09/css/style.min.css" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/09/font/Roboto-Bold.woff" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/09/font/Roboto-Bold.woff2" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/09/img/arrow.svg" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/09/index.html" beforeDir="false" />
++    </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -22,207 +41,40 @@
+   <component name="FileTemplateManagerImpl">
+     <option name="RECENT_TEMPLATES">
+       <list>
+-        <option value="HTML File" />
+         <option value="JavaScript File" />
+       </list>
+     </option>
+   </component>
+   <component name="Git.Settings">
+-    <option name="RECENT_BRANCH_BY_REPOSITORY">
+-      <map>
+-        <entry key="$PROJECT_DIR$" value="lessen8" />
+-      </map>
+-    </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+   </component>
+-  <component name="ProjectId" id="1qXL30pydQCUPoVzrZfpL0ipQl1" />
++  <component name="ProjectId" id="1rDsp9qNxKsPQuZ4K3Z0LfgiyAS" />
+   <component name="ProjectViewState">
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+   <component name="PropertiesComponent">
+-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+     <property name="WebServerToolWindowFactoryState" value="false" />
+-    <property name="last_opened_file_path" value="$PROJECT_DIR$/09" />
++    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+     <property name="node.js.detected.package.eslint" value="true" />
+     <property name="node.js.detected.package.tslint" value="true" />
+     <property name="node.js.path.for.package.eslint" value="project" />
+     <property name="node.js.path.for.package.tslint" value="project" />
+     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+-    <property name="nodejs_package_manager_path" value="npm" />
+-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+     <property name="vue.rearranger.settings.migration" value="true" />
+-  </component>
+-  <component name="RecentsManager">
+-    <key name="CopyFile.RECENT_KEYS">
+-      <recent name="C:\Users\пк\Desktop\Программирование\GLO\JSBasic" />
+-    </key>
+-    <key name="MoveFile.RECENT_KEYS">
+-      <recent name="C:\Users\пк\Desktop\Программирование\GLO\JSBasic" />
+-    </key>
+-  </component>
+-  <component name="RunManager">
+-    <configuration name="app.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/03/app.js" working-dir="$PROJECT_DIR$/03">
+-      <method v="2" />
+-    </configuration>
+-    <configuration name="app.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/09/app.js" working-dir="$PROJECT_DIR$/09">
+-      <method v="2" />
+-    </configuration>
+-    <recent_temporary>
+-      <list>
+-        <item itemvalue="Node.js.app.js" />
+-        <item itemvalue="Node.js.app.js" />
+-      </list>
+-    </recent_temporary>
+   </component>
+   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+   <component name="TaskManager">
+     <task active="true" id="Default" summary="Default task">
+-      <changelist id="8b33b83d-23e2-4f40-bcc8-daf82b7ad9a9" name="Default Changelist" comment="" />
+-      <created>1617220784827</created>
++      <changelist id="d662d04c-380a-4337-ad2e-37b15ea0f8fc" name="Default Changelist" comment="" />
++      <created>1618522174495</created>
+       <option name="number" value="Default" />
+       <option name="presentableId" value="Default" />
+-      <updated>1617220784827</updated>
+-      <workItem from="1617220785986" duration="9826000" />
+-      <workItem from="1617313233741" duration="71375000" />
+-      <workItem from="1618519985072" duration="54000" />
++      <updated>1618522174495</updated>
++      <workItem from="1618522175665" duration="5377000" />
+     </task>
+-    <task id="LOCAL-00001" summary="проба коментов">
+-      <created>1617313339368</created>
+-      <option name="number" value="00001" />
+-      <option name="presentableId" value="LOCAL-00001" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1617313339368</updated>
+-    </task>
+-    <task id="LOCAL-00002" summary="ДЗ по первому уроку">
+-      <created>1617313656896</created>
+-      <option name="number" value="00002" />
+-      <option name="presentableId" value="LOCAL-00002" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1617313656896</updated>
+-    </task>
+-    <task id="LOCAL-00003" summary="ДЗ по второму уроку (обязательное)">
+-      <created>1617397596283</created>
+-      <option name="number" value="00003" />
+-      <option name="presentableId" value="LOCAL-00003" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1617397596283</updated>
+-    </task>
+-    <task id="LOCAL-00004" summary="ДЗ по второму уроку (обязательное)">
+-      <created>1617400606120</created>
+-      <option name="number" value="00004" />
+-      <option name="presentableId" value="LOCAL-00004" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1617400606120</updated>
+-    </task>
+-    <task id="LOCAL-00005" summary="ДЗ по первому уроку (обязательное)">
+-      <created>1617400755940</created>
+-      <option name="number" value="00005" />
+-      <option name="presentableId" value="LOCAL-00005" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1617400755940</updated>
+-    </task>
+-    <task id="LOCAL-00006" summary="Ветка мастер, все почистил">
+-      <created>1617401487191</created>
+-      <option name="number" value="00006" />
+-      <option name="presentableId" value="LOCAL-00006" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1617401487191</updated>
+-    </task>
+-    <task id="LOCAL-00007" summary="Ветка 1, все почистил">
+-      <created>1617401578299</created>
+-      <option name="number" value="00007" />
+-      <option name="presentableId" value="LOCAL-00007" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1617401578299</updated>
+-    </task>
+-    <task id="LOCAL-00008" summary="ДЗ по второму уроку (обязательное)">
+-      <created>1617401736422</created>
+-      <option name="number" value="00008" />
+-      <option name="presentableId" value="LOCAL-00008" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1617401736422</updated>
+-    </task>
+-    <task id="LOCAL-00009" summary="ДЗ по третьему уроку (обязательное)">
+-      <created>1617644215945</created>
+-      <option name="number" value="00009" />
+-      <option name="presentableId" value="LOCAL-00009" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1617644215945</updated>
+-    </task>
+-    <task id="LOCAL-00010" summary="ДЗ по третьему уроку (обязательное)">
+-      <created>1617644485594</created>
+-      <option name="number" value="00010" />
+-      <option name="presentableId" value="LOCAL-00010" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1617644485594</updated>
+-    </task>
+-    <task id="LOCAL-00011" summary="ДЗ по третьему уроку (обязательное)&#10;поправлены бэктики и кавычки">
+-      <created>1617645185500</created>
+-      <option name="number" value="00011" />
+-      <option name="presentableId" value="LOCAL-00011" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1617645185500</updated>
+-    </task>
+-    <task id="LOCAL-00012" summary="ДЗ по третьему уроку (дополнительное)">
+-      <created>1617650151020</created>
+-      <option name="number" value="00012" />
+-      <option name="presentableId" value="LOCAL-00012" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1617650151021</updated>
+-    </task>
+-    <task id="LOCAL-00013" summary="ДЗ по четвертому уроку.">
+-      <created>1617828214782</created>
+-      <option name="number" value="00013" />
+-      <option name="presentableId" value="LOCAL-00013" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1617828214782</updated>
+-    </task>
+-    <task id="LOCAL-00014" summary="ДЗ по четвертому уроку. Исправленное">
+-      <created>1617860112830</created>
+-      <option name="number" value="00014" />
+-      <option name="presentableId" value="LOCAL-00014" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1617860112830</updated>
+-    </task>
+-    <task id="LOCAL-00015" summary="ДЗ по пятому уроку. С проверкой на число есть вопрос, написал в комментарии в начале программы">
+-      <created>1618039265486</created>
+-      <option name="number" value="00015" />
+-      <option name="presentableId" value="LOCAL-00015" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1618039265486</updated>
+-    </task>
+-    <task id="LOCAL-00016" summary="ДЗ по пятому уроку.">
+-      <created>1618131796498</created>
+-      <option name="number" value="00016" />
+-      <option name="presentableId" value="LOCAL-00016" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1618131796498</updated>
+-    </task>
+-    <task id="LOCAL-00017" summary="ДЗ по шестому уроку. Все работает. Не понял таки как замкнуть...">
+-      <created>1618156205686</created>
+-      <option name="number" value="00017" />
+-      <option name="presentableId" value="LOCAL-00017" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1618156205686</updated>
+-    </task>
+-    <task id="LOCAL-00018" summary="ДЗ по седьмому уроку. запутался в объекте, не могу понять почему не срабатывает.">
+-      <created>1618177475744</created>
+-      <option name="number" value="00018" />
+-      <option name="presentableId" value="LOCAL-00018" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1618177475745</updated>
+-    </task>
+-    <task id="LOCAL-00019" summary="ДЗ по восьмому уроку.">
+-      <created>1618435757512</created>
+-      <option name="number" value="00019" />
+-      <option name="presentableId" value="LOCAL-00019" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1618435757512</updated>
+-    </task>
+-    <option name="localTasksCounter" value="20" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -238,79 +90,5 @@
+         </entry>
+       </map>
+     </option>
+-    <option name="oldMeFiltersMigrated" value="true" />
+-  </component>
+-  <component name="VcsManagerConfiguration">
+-    <MESSAGE value="проба коментов" />
+-    <MESSAGE value="ДЗ по первому уроку" />
+-    <MESSAGE value="ДЗ по первому уроку (обязательное)" />
+-    <MESSAGE value="Ветка мастер, все почистил" />
+-    <MESSAGE value="Ветка 1, все почистил" />
+-    <MESSAGE value="ДЗ по второму уроку (обязательное)" />
+-    <MESSAGE value="ДЗ по третьему уроку (обязательное)" />
+-    <MESSAGE value="ДЗ по третьему уроку (обязательное)&#10;поправлены бэктики и кавычки" />
+-    <MESSAGE value="ДЗ по третьему уроку (дополнительное)" />
+-    <MESSAGE value="ДЗ по четвертому уроку." />
+-    <MESSAGE value="ДЗ по четвертому уроку. Исправленное" />
+-    <MESSAGE value="ДЗ по пятому уроку. С проверкой на число есть вопрос, написал в комментарии в начале программы" />
+-    <MESSAGE value="ДЗ по пятому уроку." />
+-    <MESSAGE value="ДЗ по шестому уроку. Все работает. Не понял таки как замкнуть..." />
+-    <MESSAGE value="ДЗ по седьмому уроку. запутался в объекте, не могу понять почему не срабатывает." />
+-    <MESSAGE value="ДЗ по восьмому уроку." />
+-    <option name="LAST_COMMIT_MESSAGE" value="ДЗ по восьмому уроку." />
+-  </component>
+-  <component name="WindowStateProjectService">
+-    <state x="155" y="0" key="#JSHint" timestamp="1617769393059">
+-      <screen x="0" y="0" width="1366" height="728" />
+-    </state>
+-    <state x="155" y="0" key="#JSHint/0.0.1366.728@0.0.1366.728" timestamp="1617769393059" />
+-    <state x="133" y="13" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1617304807510">
+-      <screen x="0" y="0" width="1366" height="728" />
+-    </state>
+-    <state x="133" y="13" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1617304807510" />
+-    <state x="410" y="63" key="FileChooserDialogImpl" timestamp="1618520037137">
+-      <screen x="0" y="0" width="1366" height="728" />
+-    </state>
+-    <state x="410" y="63" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1618520037137" />
+-    <state x="479" y="245" key="Github.CreateGistDialog" timestamp="1617311513702">
+-      <screen x="0" y="0" width="1366" height="728" />
+-    </state>
+-    <state x="479" y="245" key="Github.CreateGistDialog/0.0.1366.728@0.0.1366.728" timestamp="1617311513702" />
+-    <state width="1311" height="154" key="GridCell.Tab.0.bottom" timestamp="1617914510360">
+-      <screen x="0" y="0" width="1366" height="728" />
+-    </state>
+-    <state width="1311" height="154" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1617914510360" />
+-    <state width="1311" height="154" key="GridCell.Tab.0.center" timestamp="1617914510360">
+-      <screen x="0" y="0" width="1366" height="728" />
+-    </state>
+-    <state width="1311" height="154" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1617914510360" />
+-    <state width="1311" height="154" key="GridCell.Tab.0.left" timestamp="1617914510359">
+-      <screen x="0" y="0" width="1366" height="728" />
+-    </state>
+-    <state width="1311" height="154" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1617914510359" />
+-    <state width="1311" height="154" key="GridCell.Tab.0.right" timestamp="1617914510360">
+-      <screen x="0" y="0" width="1366" height="728" />
+-    </state>
+-    <state width="1311" height="154" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1617914510360" />
+-    <state x="77" y="0" key="SettingsEditor" timestamp="1617309520280">
+-      <screen x="0" y="0" width="1366" height="728" />
+-    </state>
+-    <state x="77" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1617309520280" />
+-    <state x="175" y="35" key="Vcs.Push.Dialog.v2" timestamp="1618435765173">
+-      <screen x="0" y="0" width="1366" height="728" />
+-    </state>
+-    <state x="175" y="35" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1618435765173" />
+-    <state x="46" y="0" width="710" height="728" key="find.popup" timestamp="1617221349964">
+-      <screen x="0" y="0" width="1366" height="728" />
+-    </state>
+-    <state x="46" y="0" width="710" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1617221349964" />
+-    <state x="430" y="11" key="git4idea.branch.GitSmartOperationDialog" timestamp="1617768621012">
+-      <screen x="0" y="0" width="1366" height="728" />
+-    </state>
+-    <state x="430" y="11" key="git4idea.branch.GitSmartOperationDialog/0.0.1366.728@0.0.1366.728" timestamp="1617768621012" />
+-    <state x="262" y="-1" key="search.everywhere.popup" timestamp="1617221316033">
+-      <screen x="0" y="0" width="1366" height="728" />
+-    </state>
+-    <state x="262" y="-1" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1617221316033" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: app.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app.js	(date 1618527088403)
++++ app.js	(date 1618527088403)
+@@ -0,0 +1,17 @@
++'use script';
++
++// Восстановить порядок книг.
++const books = document.querySelectorAll('.book');
++books[1].after(books[0]);
++books[3].after(books[2]);
++books[4].after(books[2]);
++books[4].after(books[3]);
++books[5].after(books[2]);
++
++// Заменить картинку заднего фона на другую из папки image
++document.body.style.backgroundImage = 'image/adv.jpg';
++
++// Исправить заголовок в книге 3( Получится - "Книга 3. this и Прототипы Объектов")
++// Удалить рекламу со страницы
++// Восстановить порядок глав во второй и пятой книге (внимательно инспектируйте индексы элементов, поможет dev tools)
++// в шестой книге добавить главу “Глава 8: За пределами ES6” и поставить её в правильное место
+\ No newline at end of file

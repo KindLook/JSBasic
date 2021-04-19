@@ -1,0 +1,422 @@
+Index: 08/index.html
+===================================================================
+--- 08/index.html	(revision f3727f7e05f8d215e97626459edd1c86d30089bd)
++++ 08/index.html	(revision f3727f7e05f8d215e97626459edd1c86d30089bd)
+@@ -1,11 +0,0 @@
+-<!DOCTYPE html>
+-<html lang="en">
+-<head>
+-    <meta charset="UTF-8">
+-    <title>Title</title>
+-</head>
+-<body>
+-
+-<script src="app.js"></script>
+-</body>
+-</html>
+\ No newline at end of file
+Index: 08/app.js
+===================================================================
+--- 08/app.js	(revision f3727f7e05f8d215e97626459edd1c86d30089bd)
++++ 08/app.js	(revision f3727f7e05f8d215e97626459edd1c86d30089bd)
+@@ -1,159 +0,0 @@
+-'use strict';
+-
+-//"Доход за месяц"
+-let money,
+-    start = function (){
+-        do {
+-            money = prompt('Ваш месячный доход?', 80000 );
+-        }
+-        while (isNaN(money) || money === '' || money === null);
+-        };
+-
+-    start();
+-
+-    let appData = {
+-        budget: money,
+-        budgetDay: 0,
+-        budgetMonth: 0,
+-        income: {},
+-        addIncome: [],
+-        expenses: [],
+-        addExpenses: [],
+-        deposit: false,
+-        percentDeposit: 0,
+-        moneyDeposit: 0,
+-        mission: 50000,
+-        period: 7,
+-
+-        asking: function (){
+-            if(confirm('Есть ли у вас дополнительный заработок?')){
+-                let itemIncome;
+-                let cashIncome;
+-                do{
+-                    itemIncome = +prompt('Какой у вас есть дополнительный заработок?', 'Таксую');
+-                }
+-                while (itemIncome === null || itemIncome === '' || !isNaN(itemIncome))
+-
+-                do {
+-                    cashIncome = +prompt('Сколько в месяц вы на этом зарабатываете?', 10000);
+-                }
+-                while (cashIncome === null || cashIncome === '' || isNaN(cashIncome))
+-
+-                appData.income[itemIncome] = cashIncome;
+-            }
+-
+-            let addExpenses = prompt('Перечислите возможные расходы за рассчитываемый период через запятую');
+-                appData.addExpenses = addExpenses.map(function (item){
+-                    return item = item[0].toUpperCase() + item.toLowerCase().substring(1);
+-                })
+-                console.log(appData.addExpenses.join( ));
+-
+-
+-                for(let i = 0; i< 2; i++){
+-                    let itemExpenses;
+-                    do {
+-                        itemExpenses = prompt('Введите обязательную статью расходов');
+-                    }
+-                    while (itemExpenses === null || itemExpenses === '' || !isNaN(itemExpenses))
+-
+-
+-                    let cashExpenses;
+-                    do{
+-                        cashExpenses = prompt('Во сколько это обойдется?');
+-                    }
+-                    while (isNaN(cashExpenses) || cashExpenses === '' || cashExpenses === null);
+-                    appData.expenses[itemExpenses] = +cashExpenses;
+-
+-                }
+-
+-                },
+-        getInfoDeposit: function (){
+-            appData.deposit = confirm('Есть ли у вас депозит в банке?');
+-            if(appData.deposit){
+-
+-                do {
+-                    appData.persenDeposit = prompt('Какой годовой процент?', '10')
+-                }
+-                while (isNaN(appData.persenDeposit) || appData.persenDeposit === '' || appData.persenDeposit === null)
+-
+-
+-                do {
+-                    appData.moneyDeposit = prompt('Какая сумма заложена?', 10000)
+-                }
+-                while (isNaN(appData.moneyDeposit) || appData.moneyDeposit === '' || appData.moneyDeposit === null)
+-            }
+-        },
+-        /**
+-         * Расходы за месяц
+-         * @returns {number}
+-         */
+-        getExpensesMonth: function(){
+-                   for (let key in appData.expenses){
+-                        appData.expensesMonth += appData.expenses[key];
+-                    }
+-                },
+-
+-        /**
+-         * Функция возвращает Накопления за месяц (Доходы минус расходы)
+-         * @returns {number}
+-         */
+-        getBudget: function () {
+-            appData.budgetMonth = appData.budget - appData.expensesMonth;
+-            appData.budgetDay = Math.floor(appData.budgetMonth / 30);
+-        },
+-
+-        /**
+-         * Подсчитывает за какой период будет достигнута цель, зная результат месячного накопления (getAccumulatedMonth) и возвращает результат
+-         * @returns {number}
+-         */
+-        getTargetMonth: function (){
+-            return appData.mission / appData.budgetMonth;
+-        },
+-
+-        /**
+-         * Если budgetDay больше 1200, то “У вас высокий уровень дохода”
+-
+-         Если budgetDay больше 600 и меньше 1200, то сообщение “У вас средний уровень дохода”
+-
+-         Если budgetDay меньше 600 и больше 0 то в консоль вывести сообщение “К сожалению у вас уровень дохода ниже среднего”
+-
+-         Если отрицательное значение то вывести “Что то пошло не так”
+-
+-         Учесть варианты 0, 600 и 1200 (к какому уровню не важно)
+-         */
+-        getStatusIncome: function(){
+-            if (appData.budgetDay > 1200){
+-                return ('У вас высокий уровень дохода');
+-            }else if (600 < appData.budgetDay < 1200){
+-                return (('У вас средний уровень дохода'));
+-            }else if(0 < appData.budgetDay < 600){
+-                return ('К сожалению у вас уровень дохода ниже среднего');
+-            }else {
+-                return('Что-то пошло не так!');
+-            }
+-        },
+-
+-        calcSavedMoney: function (){
+-            return appData.budgetMonth * appData.period;
+-        }
+-    };
+-appData.asking();
+-appData.getExpensesMonth();
+-appData.getBudget();
+-
+-
+-console.log('Расходы за месяц: ' + appData.expensesMonth);
+-
+-if(appData.getTargetMonth() > 0){
+-    console.log('Цель будет достигнута за ' + Math.ceil(appData.getTargetMonth()) + ' месяца');
+-} else {
+-    console.log('Цель не будет достигнута');
+-}
+-
+-console.log(appData.getStatusIncome());
+-
+-for(let key in appData){
+-    console.log('Наша программа включает в себя данные: ' + key + ' - ' + appData[key]);
+-}
+-
+-
+Index: 07/app.js
+===================================================================
+--- 07/app.js	(revision f3727f7e05f8d215e97626459edd1c86d30089bd)
++++ 07/app.js	(revision f3727f7e05f8d215e97626459edd1c86d30089bd)
+@@ -1,168 +0,0 @@
+-'use strict';
+-
+-
+-/**
+- * Проверка на число, n пытается преобразовать в число с точкой и спрашивает
+- * это не NaN? или n конечное не бесконечное число. Если преобразовать не получается - false
+- * @param n
+- * @returns {boolean|boolean}
+- */
+-let isNumber = function (n){
+-   return !isNaN(parseFloat(n)) && isFinite(n);
+-};
+-
+-
+-
+-//"Доход за месяц"
+-let money,
+-    start = function (){
+-        do {
+-            money = prompt('Ваш месячный доход?', 80000 );
+-        }
+-        while (isNaN(money) || money === '' || money === null);
+-        };
+-
+-    start();
+-
+-    let appData = {
+-        income: {},
+-        addIncome: [],
+-        expenses: [],
+-        addExpenses: [],
+-        deposit: false,
+-        mission: 50000,
+-        period: 7,
+-        budget: money,
+-        budgetDay: 0,
+-        budgetMonth: 0,
+-        asking: function (){
+-            let addExpenses = prompt('Перечислите возможные расходы за рассчитываемый период через запятую');
+-                appData.addExpenses = addExpenses.toLowerCase().split(',');
+-                appData.deposit = confirm('Есть ли у вас депозит в банке?');
+-                console.log(appData.addExpenses);
+-                console.log(appData.deposit);
+-                },
+-        /**
+-         * Расходы за месяц
+-         * @returns {number}
+-         */
+-        getExpensesMonth: function(){
+-                    let expensesMonth = 0;
+-                    for (let i = 0; i < 2; i++){
+-                        appData.expenses[i] = prompt('Введите обязательную статью расходов');
+-                        do {
+-                            expensesMonth = +prompt('Во сколько это обойдется?');
+-                        }
+-                        while (!isNumber(expensesMonth));
+-                    }
+-
+-                    appData.expensesMonth = expensesMonth;
+-                    console.log(appData.expensesMonth);
+-                },
+-
+-        /**
+-         * Функция возвращает Накопления за месяц (Доходы минус расходы)
+-         * @returns {number}
+-         */
+-        getAccumulatedMonth: function () {
+-            let budgetMonth = 0;
+-            appData.budgetMonth = money - appData.budgetMonth;
+-            console.log(appData.budgetMonth);
+-        },
+-
+-        /**
+-         * Подсчитывает за какой период будет достигнута цель, зная результат месячного накопления (getAccumulatedMonth) и возвращает результат
+-         * @returns {number}
+-         */
+-        getTargetMonth: function (){
+-            return Math.ceil(appData.mission / appData.budgetMonth);
+-        },
+-
+-        budgetDay: function (){
+-           let budgetDay = 0;
+-           appData.budgetDay = Math.floor(appData.budgetMonth / 30);
+-            console.log(appData.budgetDay);
+-        },
+-        /**
+-         * Если budgetDay больше 1200, то “У вас высокий уровень дохода”
+-
+-         Если budgetDay больше 600 и меньше 1200, то сообщение “У вас средний уровень дохода”
+-
+-         Если budgetDay меньше 600 и больше 0 то в консоль вывести сообщение “К сожалению у вас уровень дохода ниже среднего”
+-
+-         Если отрицательное значение то вывести “Что то пошло не так”
+-
+-         Учесть варианты 0, 600 и 1200 (к какому уровню не важно)
+-         */
+-        getStatusIncome: function(){
+-            if (appData.budgetDay > 1200){
+-                console.log('У вас высокий уровень дохода');
+-            }else if (600 < appData.budgetDay < 1200){
+-                console.log(('У вас средний уровень дохода'));
+-            }else if(0 < appData.budgetDay < 600){
+-                console.log('К сожалению у вас уровень дохода ниже среднего');
+-            }else {
+-                console.log('Вы не сможете достичь цели');
+-            }
+-        },
+-    };
+-
+-console.log(appData);
+-
+-//
+-// let expensesAmount = getExpensesMonth();
+-// console.log('Расходы за месяц: ' + expensesAmount);
+-
+-
+-
+-// /**
+-//  * Подсчитывает за какой период будет достигнута цель, зная результат месячного накопления (accumulatedMonth) и возвращает результат
+-//  * @returns {number}
+-//  */
+-// let getTargetMonth = function (){
+-//     return Math.ceil(appData.mission / accumulatedMonth);
+-// };
+-
+-
+-// /**
+-//  * Если budgetDay больше 1200, то “У вас высокий уровень дохода”
+-//
+-//  Если budgetDay больше 600 и меньше 1200, то сообщение “У вас средний уровень дохода”
+-//
+-//  Если budgetDay меньше 600 и больше 0 то в консоль вывести сообщение “К сожалению у вас уровень дохода ниже среднего”
+-//
+-//  Если отрицательное значение то вывести “Что то пошло не так”
+-//
+-//  Учесть варианты 0, 600 и 1200 (к какому уровню не важно)
+-//  */
+-// function getStatusIncome(){
+-//     if (budgetDay > 1200){
+-//         console.log('У вас высокий уровень дохода');
+-//     }else if (600 < budgetDay < 1200){
+-//         console.log(('У вас средний уровень дохода'));
+-//     }else if(0 < budgetDay < 600){
+-//         console.log('К сожалению у вас уровень дохода ниже среднего');
+-//     }else {
+-//         console.log('Вы не сможете достичь цели');
+-//     }
+-// }
+-
+-
+-
+-
+-console.log('Расходы за месяц: ' + appData.expensesMonth);
+-
+-//сколько месяцев потребуется до достижения цели
+-let targetMonth = appData.getTargetMonth();
+-console.log('Цель будет достигнута за ' + targetMonth + ' месяцев');
+-
+-
+-
+-
+-appData.getStatusIncome();
+-
+-
+-
+-
+-
+-
+Index: 10/app.js
+===================================================================
+--- 10/app.js	(revision f3727f7e05f8d215e97626459edd1c86d30089bd)
++++ 10/app.js	(revision f3727f7e05f8d215e97626459edd1c86d30089bd)
+@@ -1,39 +0,0 @@
+-'use strict';
+-
+-// Восстановить порядок книг.
+-// Заменить картинку заднего фона на другую из папки image
+-// Исправить заголовок в книге 3( Получится - "Книга 3. this и Прототипы Объектов")
+-// Удалить рекламу со страницы
+-// Восстановить порядок глав во второй и пятой книге (внимательно инспектируйте индексы элементов, поможет dev tools)
+-// в шестой книге добавить главу “Глава 8: За пределами ES6” и поставить её в правильное место
+-
+-const book = document.querySelectorAll('.book');
+-const ad = document.querySelector('.adv');
+-
+-console.log(book);
+-
+-book[5].after(book[2]);
+-book[1].after(book[0]);
+-book[0].after(book[4]);
+-
+-
+-
+-document.body.style.backgroundImage = 'url(./image/you-dont-know-js.jpg)';
+-
+-book[4].innerHTML = '<h2><a href="https://github.com/azat-io/you-dont-know-js-ru/blob/master/this%20%26%20object%20prototypes/README.md#you-dont-know-js-this--object-prototypes" target="_blank">Книга 3. this и Прототипы Объектов</a></h2>';
+-
+-ad.remove();
+-
+-book[0].childNodes[3].children[3].after(book[0].childNodes[3].children[6]);
+-book[0].childNodes[3].children[5].after(book[0].childNodes[3].children[8]);
+-book[0].childNodes[3].children[4].after(book[0].childNodes[3].children[6]);
+-
+-
+-book[5].childNodes[3].children[3].before(book[5].childNodes[3].children[9]);
+-book[5].childNodes[3].children[7].before(book[5].childNodes[3].children[2]);
+-book[5].childNodes[3].children[9].before(book[5].childNodes[3].children[5]);
+-
+-const newElem = document.createElement('li');
+-newElem.textContent = 'Глава 8: За пределами ES6';
+-book[2].childNodes[3].append(newElem);
+-book[2].childNodes[3].children[9].before(book[2].childNodes[3].children[10]);
+\ No newline at end of file
+Index: app.js
+===================================================================
+--- app.js	(revision f3727f7e05f8d215e97626459edd1c86d30089bd)
++++ app.js	(revision f3727f7e05f8d215e97626459edd1c86d30089bd)
+@@ -1,17 +0,0 @@
+-'use script';
+-
+-// Восстановить порядок книг.
+-const books = document.querySelectorAll('.book');
+-books[1].after(books[0]);
+-books[3].after(books[2]);
+-books[4].after(books[2]);
+-books[4].after(books[3]);
+-books[5].after(books[2]);
+-
+-// Заменить картинку заднего фона на другую из папки image
+-document.body.style.backgroundImage = 'image/adv.jpg';
+-
+-// Исправить заголовок в книге 3( Получится - "Книга 3. this и Прототипы Объектов")
+-// Удалить рекламу со страницы
+-// Восстановить порядок глав во второй и пятой книге (внимательно инспектируйте индексы элементов, поможет dev tools)
+-// в шестой книге добавить главу “Глава 8: За пределами ES6” и поставить её в правильное место
+\ No newline at end of file
