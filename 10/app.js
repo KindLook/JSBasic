@@ -20,7 +20,7 @@ book[0].after(book[4]);
 
 document.body.style.backgroundImage = 'url(./image/you-dont-know-js.jpg)';
 
-book[4].innerHTML = '<h2><a href="https://github.com/azat-io/you-dont-know-js-ru/blob/master/this%20%26%20object%20prototypes/README.md#you-dont-know-js-this--object-prototypes" target="_blank">Книга 3. this и Прототипы Объектов</a></h2>';
+book[4].children[0].innerHTML = '<a href="https://github.com/azat-io/you-dont-know-js-ru/blob/master/this%20%26%20object%20prototypes/README.md#you-dont-know-js-this--object-prototypes" target="_blank">Книга 3. this и Прототипы Объектов</a>';
 
 ad.remove();
 
