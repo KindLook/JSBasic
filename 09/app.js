@@ -153,7 +153,6 @@ let additionalExpensesValue = document.getElementsByClassName('additional_expens
 let incomePeriodValue = document.getElementsByClassName('income_period-value');
 let targetMonthValue = document.getElementsByClassName('target_month-value');
 
-
 /*
 Оставшиеся поля через querySelector каждый в отдельную переменную:
   поля ввода (input) с левой стороны и не забудьте про range.
