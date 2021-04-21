@@ -1,18 +1,26 @@
 'use strict';
+let start = document.getElementById('start'),
+    incomeAdd = document.getElementsByTagName('button')[0],
+    expensesAdd = document.getElementsByTagName('button')[1],
+    depositCheck = document.querySelector('#deposit-check'),
+    additionalIncomeItem = document.querySelectorAll('.additional_income-item'),
+    expenseMonthValue = document.getElementsByClassName('budget_day-value'),
+    additionalIncomeValue = document.getElementsByClassName('additional_income-value'),
+    additionalExpensesValue = document.getElementsByClassName('additional_expenses-value'),
+    incomePeriodValue = document.getElementsByClassName('income_period-value'),
+    targetMonthValue = document.getElementsByClassName('target_month-value'),
+    salaryAmount = document.querySelector('.salary-amount'),
+    incomeTitle = document.querySelector('.income-title'),
+    incomeAmount = document.querySelector('.income-amount'),
+    expensesTitle = document.querySelector('.expenses-title'),
+    expensesAmount = document.querySelector('.expenses-amount'),
+    additionalExpensesItem = document.querySelector('.additional_expenses-item'),
+    periodSelect = document.querySelector('.period-select');
 
-//"Доход за месяц"
-let money,
-    start = function (){
-        do {
-            money = prompt('Ваш месячный доход?', 80000 );
-        }
-        while (isNaN(money) || money === '' || money === null);
-        };
 
-    start();
 
     let appData = {
-        budget: money,
+        budget: 0,
         budgetDay: 0,
         budgetMonth: 0,
         income: {},
@@ -24,63 +32,49 @@ let money,
         moneyDeposit: 0,
         mission: 50000,
         period: 7,
+        start: function (){
+            if(salaryAmount.value === ''){
+                alert('Ошибка. Поле "Месячный доход" должно быть заполнено');
+                return ;
+            }
+
+            appData.budget = salaryAmount.value;
+            console.log('salaryAmount.value: ', salaryAmount.value);
+            // appData.asking();
+            // appData.getExpensesMonth();
+            // appData.getBudget();
+        },
+
 
         asking: function (){
             if(confirm('Есть ли у вас дополнительный заработок?')){
                 let itemIncome;
-                let cashIncome;
                 do{
-                    itemIncome = +prompt('Какой у вас есть дополнительный заработок?', 'Таксую');
+                    itemIncome = prompt('Какой у вас есть дополнительный заработок?', 'Таксую');
                 }
-                while (itemIncome === null || itemIncome === '' || !isNaN(itemIncome))
-
-                do {
-                    cashIncome = +prompt('Сколько в месяц вы на этом зарабатываете?', 10000);
-                }
-                while (cashIncome === null || cashIncome === '' || isNaN(cashIncome))
-
-                appData.income[itemIncome] = cashIncome;
+                while (itemIncome === null || itemIncome === '');
+                let cashIncome = prompt('Сколько в месяц вы на этом зарабатываете?', 10000);
+                appData.income[itemIncome] = +cashIncome;
             }
 
             let addExpenses = prompt('Перечислите возможные расходы за рассчитываемый период через запятую');
-                appData.addExpenses = addExpenses.map(function (item){
-                    return item = item[0].toUpperCase() + item.toLowerCase().substring(1);
-                })
-                console.log(appData.addExpenses.join( ));
-
+                appData.addExpenses = addExpenses.toLowerCase().split(',');
 
                 for(let i = 0; i< 2; i++){
-                    let itemExpenses;
-                    do {
-                        itemExpenses = prompt('Введите обязательную статью расходов');
-                    }
-                    while (itemExpenses === null || itemExpenses === '' || !isNaN(itemExpenses))
-
-
+                    let itemExpenses = prompt('Введите обязательную статью расходов');
                     let cashExpenses;
                     do{
                         cashExpenses = prompt('Во сколько это обойдется?');
                     }
                     while (isNaN(cashExpenses) || cashExpenses === '' || cashExpenses === null);
                     appData.expenses[itemExpenses] = +cashExpenses;
-
                 }
-
                 },
         getInfoDeposit: function (){
             appData.deposit = confirm('Есть ли у вас депозит в банке?');
             if(appData.deposit){
-
-                do {
-                    appData.persenDeposit = prompt('Какой годовой процент?', '10')
-                }
-                while (isNaN(appData.persenDeposit) || appData.persenDeposit === '' || appData.persenDeposit === null)
-
-
-                do {
-                    appData.moneyDeposit = prompt('Какая сумма заложена?', 10000)
-                }
-                while (isNaN(appData.moneyDeposit) || appData.moneyDeposit === '' || appData.moneyDeposit === null)
+                appData.persenDeposit = prompt('Какой годовой процент?', '10');
+                appData.moneyDeposit = prompt('Какая сумма заложена?', 10000);
             }
         },
         /**
@@ -137,12 +131,12 @@ let money,
             return appData.budgetMonth * appData.period;
         }
     };
-appData.asking();
-appData.getExpensesMonth();
-appData.getBudget();
+start.addEventListener('click', appData.start());
 
 
-console.log('Расходы за месяц: ' + appData.expensesMonth);
+
+
+
 
 if(appData.getTargetMonth() > 0){
     console.log('Цель будет достигнута за ' + Math.ceil(appData.getTargetMonth()) + ' месяца');
@@ -150,10 +144,8 @@ if(appData.getTargetMonth() > 0){
     console.log('Цель не будет достигнута');
 }
 
-console.log(appData.getStatusIncome());
 
-for(let key in appData){
-    console.log('Наша программа включает в себя данные: ' + key + ' - ' + appData[key]);
-}
+
+
 
 
