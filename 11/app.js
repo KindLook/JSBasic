@@ -17,7 +17,8 @@ let start = document.getElementById('start'),
     expensesTitle = document.querySelector('.expenses-title'),
     expensesAmount = document.querySelector('.expenses-amount'),
     additionalExpensesItem = document.querySelector('.additional_expenses-item'),
-    periodSelect = document.querySelector('.period-select');
+    periodSelect = document.querySelector('.period-select'),
+    targetAmount = document.querySelector('.target-amount');
 
 
 let appData = {
@@ -32,7 +33,6 @@ let appData = {
     deposit: false,
     percentDeposit: 0,
     moneyDeposit: 0,
-    mission: 50000,
     period: 7,
     start: function () {
         if (salaryAmount.value === '') {
@@ -51,13 +51,14 @@ let appData = {
     },
     /**
      * записывает результаты вычисленийв поля на сайте
-      */
-    showResult: function (){
+     */
+    showResult: function () {
         budgetMonthValue.value = appData.budgetMonth;
         budgetDayValue.value = appData.budgetDay;
         expensesMonthValue.value = appData.expensesMonth;
         additionalExpensesValue.value = appData.addExpenses.join(', ');
         additionalIncomeValue.value = appData.addIncome.join(', ');
+        targetMonthValue.value = Math.ceil(appData.getTargetMonth());  //округление в большую сторону
     },
 
 
@@ -81,36 +82,36 @@ let appData = {
      * соединим все расходы и запишем в объект
      * запускается в start
      */
-    getExpenses: function (){
-      expensesItems.forEach(function (item){
-          let itemExpenses = item.querySelector('.expenses-title').value;  //получим значение из поля input expenses-title  наименование
-          let cashExpenses = item.querySelector('.expenses-amount').value; //получим значение из поля input expenses-amount сумма
-          if(itemExpenses !== '' && cashExpenses !== ''){
-              appData.expenses[itemExpenses] = cashExpenses;  //если не пустые строки то записываем в глобальный объект expenses
-          }
+    getExpenses: function () {
+        expensesItems.forEach(function (item) {
+            let itemExpenses = item.querySelector('.expenses-title').value;  //получим значение из поля input expenses-title  наименование
+            let cashExpenses = item.querySelector('.expenses-amount').value; //получим значение из поля input expenses-amount сумма
+            if (itemExpenses !== '' && cashExpenses !== '') {
+                appData.expenses[itemExpenses] = cashExpenses;  //если не пустые строки то записываем в глобальный объект expenses
+            }
 
-      });
+        });
     },
     /**
      * Возможные расходы
      */
-    getAddExpenses: function (){
+    getAddExpenses: function () {
         let addExpenses = additionalExpensesItem.value.split(','); //массив и элементы через ,
-        addExpenses.forEach(function (item){
+        addExpenses.forEach(function (item) {
             item = item.trim();   //убрали лишние пробелы
-            if(item !== ''){
+            if (item !== '') {
                 appData.addExpenses.push(item);
             }
         })
     },
 
-    getAddIncome: function (){
-      additionalIncomeItem.forEach(function (item){
-         let itemValue = item.value.trim();
-         if (itemValue !== ''){
-             appData.addIncome.push(itemValue);
-         }
-      });
+    getAddIncome: function () {
+        additionalIncomeItem.forEach(function (item) {
+            let itemValue = item.value.trim();
+            if (itemValue !== '') {
+                appData.addIncome.push(itemValue);
+            }
+        });
 
     },
 
@@ -160,7 +161,7 @@ let appData = {
      * @returns {number}
      */
     getTargetMonth: function () {
-        return appData.mission / appData.budgetMonth;
+        return targetAmount.value / appData.budgetMonth;
     },
 
     /**

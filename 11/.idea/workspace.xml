@@ -60,7 +60,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1618860864454</updated>
-      <workItem from="1618860865735" duration="18704000" />
+      <workItem from="1618860865735" duration="19979000" />
     </task>
     <task id="LOCAL-00001" summary="дз11 урок Практика - не отрабатывает console.log('salaryAmount.value: ', salaryAmount.value);">
       <created>1618987400838</created>
@@ -69,7 +69,14 @@
       <option name="project" value="LOCAL" />
       <updated>1618987400838</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="дз11 урок Практика - добавление полей расхода при нажатии на плюс, запись расходов в объект, дополнительный доход, отображение результатов на странице (не работает showResult).">
+      <created>1619347922915</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1619347922915</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -88,16 +95,17 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="дз11 урок Практика - не отрабатывает console.log('salaryAmount.value: ', salaryAmount.value);" />
-    <option name="LAST_COMMIT_MESSAGE" value="дз11 урок Практика - не отрабатывает console.log('salaryAmount.value: ', salaryAmount.value);" />
+    <MESSAGE value="дз11 урок Практика - добавление полей расхода при нажатии на плюс, запись расходов в объект, дополнительный доход, отображение результатов на странице (не работает showResult)." />
+    <option name="LAST_COMMIT_MESSAGE" value="дз11 урок Практика - добавление полей расхода при нажатии на плюс, запись расходов в объект, дополнительный доход, отображение результатов на странице (не работает showResult)." />
   </component>
   <component name="WindowStateProjectService">
     <state x="410" y="63" key="FileChooserDialogImpl" timestamp="1618862211065">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="410" y="63" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1618862211065" />
-    <state x="175" y="35" key="Vcs.Push.Dialog.v2" timestamp="1618987442630">
+    <state x="175" y="35" key="Vcs.Push.Dialog.v2" timestamp="1619347997790">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="175" y="35" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1618987442630" />
+    <state x="175" y="35" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1619347997790" />
   </component>
 </project>
