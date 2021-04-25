@@ -19,7 +19,9 @@ let start = document.getElementById('start'),
     additionalExpensesItem = document.querySelector('.additional_expenses-item'),
     periodSelect = document.querySelector('.period-select'),
     targetAmount = document.querySelector('.target-amount'),
-    incomeItems = document.querySelectorAll('.income-items');
+    incomeItems = document.querySelectorAll('.income-items'),
+    periodAmount = document.querySelector('.period-amount');
+
 
 
 let appData = {
@@ -35,6 +37,7 @@ let appData = {
     deposit: false,
     percentDeposit: 0,
     moneyDeposit: 0,
+    periodRange: 1,
     start: function () {
         if (salaryAmount.value === '') {
             alert('Ошибка. Поле "Месячный доход" должно быть заполнено');
@@ -49,6 +52,7 @@ let appData = {
         appData.getAddExpenses();
         appData.getAddIncome();
         appData.getBudget();
+        appData.getRangePeriod();
 
         appData.showResult();
     },
@@ -63,7 +67,7 @@ let appData = {
         additionalIncomeValue.value = appData.addIncome.join(', ');
         targetMonthValue.value = Math.ceil(appData.getTargetMonth());  //округление в большую сторону
         incomePeriodValue.value = appData.calcPeriod;
-
+        periodAmount.value = appData.periodRange;
     },
 
 
@@ -181,6 +185,9 @@ let appData = {
         return targetAmount.value / appData.budgetMonth;
     },
 
+    getRangePeriod: function (){
+        appData.periodRange = +periodSelect.value;
+    },
     /**
      * Если budgetDay больше 1200, то “У вас высокий уровень дохода”
 
@@ -206,6 +213,7 @@ let appData = {
 
     calcPeriod: function () {
         return appData.budgetMonth * periodSelect.value;
+        console.log(periodSelect);
     }
 };
 start.addEventListener('click', appData.start);
