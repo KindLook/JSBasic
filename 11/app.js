@@ -18,7 +18,8 @@ let start = document.getElementById('start'),
     expensesAmount = document.querySelector('.expenses-amount'),
     additionalExpensesItem = document.querySelector('.additional_expenses-item'),
     periodSelect = document.querySelector('.period-select'),
-    targetAmount = document.querySelector('.target-amount');
+    targetAmount = document.querySelector('.target-amount'),
+    incomeItem = document.querySelectorAll('.income-items');
 
 
 let appData = {
@@ -26,6 +27,7 @@ let appData = {
     budgetDay: 0,
     budgetMonth: 0,
     income: {},
+    incomeMonth: 0,
     addIncome: [],
     expenses: {},
     expensesMonth: 0,
@@ -39,13 +41,14 @@ let appData = {
             return;
         }
 
-        appData.budget = salaryAmount.value;
+        appData.budget = +salaryAmount.value;
         appData.getExpenses();
-
+        appData.getIncome();
         appData.getExpensesMonth();
-        appData.getBudget();
         appData.getAddExpenses();
         appData.getAddIncome();
+        appData.getBudget();
+
         appData.showResult();
     },
     /**
@@ -92,6 +95,23 @@ let appData = {
 
         });
     },
+
+    getIncome: function (){            //то же что и с расходами getExpenses
+        if (confirm('Есть ли у вас дополнительный заработок?')) {
+            let itemIncome;
+            do {
+                itemIncome = prompt('Какой у вас есть дополнительный заработок?', 'Таксую');
+            }
+            while (itemIncome === null || itemIncome === '');
+            let cashIncome = prompt('Сколько в месяц вы на этом зарабатываете?', 10000);
+            appData.income[itemIncome] = +cashIncome;
+        }
+
+        for (let key in appData.income){
+            appData.incomeMonth += +appData.income[key]
+        }
+
+    },
     /**
      * Возможные расходы
      */
@@ -115,21 +135,7 @@ let appData = {
 
     },
 
-    asking: function () {
-        if (confirm('Есть ли у вас дополнительный заработок?')) {
-            let itemIncome;
-            do {
-                itemIncome = prompt('Какой у вас есть дополнительный заработок?', 'Таксую');
-            }
-            while (itemIncome === null || itemIncome === '');
-            let cashIncome = prompt('Сколько в месяц вы на этом зарабатываете?', 10000);
-            appData.income[itemIncome] = +cashIncome;
-        }
 
-        let addExpenses = prompt('Перечислите возможные расходы за рассчитываемый период через запятую');
-        appData.addExpenses = addExpenses.toLowerCase().split(',');
-
-    },
     getInfoDeposit: function () {
         appData.deposit = confirm('Есть ли у вас депозит в банке?');
         if (appData.deposit) {
@@ -152,7 +158,7 @@ let appData = {
      * @returns {number}
      */
     getBudget: function () {
-        appData.budgetMonth = appData.budget - appData.expensesMonth;
+        appData.budgetMonth = (appData.budget + appData.incomeMonth) - appData.expensesMonth;
         appData.budgetDay = Math.floor(appData.budgetMonth / 30);
     },
 

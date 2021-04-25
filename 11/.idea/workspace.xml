@@ -60,7 +60,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1618860864454</updated>
-      <workItem from="1618860865735" duration="20851000" />
+      <workItem from="1618860865735" duration="22314000" />
     </task>
     <task id="LOCAL-00001" summary="дз11 урок Практика - не отрабатывает console.log('salaryAmount.value: ', salaryAmount.value);">
       <created>1618987400838</created>
@@ -83,7 +83,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619349209421</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="дз11 урок Практика - расчет накопление за период и отображение на странице (отображение не работает)">
+      <created>1619349650363</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1619349650363</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -104,16 +111,17 @@
     <MESSAGE value="дз11 урок Практика - не отрабатывает console.log('salaryAmount.value: ', salaryAmount.value);" />
     <MESSAGE value="дз11 урок Практика - добавление полей расхода при нажатии на плюс, запись расходов в объект, дополнительный доход, отображение результатов на странице (не работает showResult)." />
     <MESSAGE value="дз11 урок Практика - расчет достижение цели в мес, округл в большую сторону и отображение на странице (отображение не работает), в targetMonthValue.value передает, но не отображается" />
-    <option name="LAST_COMMIT_MESSAGE" value="дз11 урок Практика - расчет достижение цели в мес, округл в большую сторону и отображение на странице (отображение не работает), в targetMonthValue.value передает, но не отображается" />
+    <MESSAGE value="дз11 урок Практика - расчет накопление за период и отображение на странице (отображение не работает)" />
+    <option name="LAST_COMMIT_MESSAGE" value="дз11 урок Практика - расчет накопление за период и отображение на странице (отображение не работает)" />
   </component>
   <component name="WindowStateProjectService">
     <state x="410" y="63" key="FileChooserDialogImpl" timestamp="1618862211065">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="410" y="63" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1618862211065" />
-    <state x="175" y="35" key="Vcs.Push.Dialog.v2" timestamp="1619349215737">
+    <state x="175" y="35" key="Vcs.Push.Dialog.v2" timestamp="1619349655625">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="175" y="35" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1619349215737" />
+    <state x="175" y="35" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1619349655625" />
   </component>
 </project>
