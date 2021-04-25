@@ -33,7 +33,6 @@ let appData = {
     deposit: false,
     percentDeposit: 0,
     moneyDeposit: 0,
-    period: 7,
     start: function () {
         if (salaryAmount.value === '') {
             alert('Ошибка. Поле "Месячный доход" должно быть заполнено');
@@ -59,6 +58,7 @@ let appData = {
         additionalExpensesValue.value = appData.addExpenses.join(', ');
         additionalIncomeValue.value = appData.addIncome.join(', ');
         targetMonthValue.value = Math.ceil(appData.getTargetMonth());  //округление в большую сторону
+        incomePeriodValue.value = appData.calcPeriod();
     },
 
 
@@ -187,8 +187,8 @@ let appData = {
         }
     },
 
-    calcSavedMoney: function () {
-        return appData.budgetMonth * appData.period;
+    calcPeriod: function () {
+        return appData.budgetMonth * periodSelect.value;
     }
 };
 start.addEventListener('click', appData.start);
