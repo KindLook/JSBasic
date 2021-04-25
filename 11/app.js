@@ -41,8 +41,7 @@ let appData = {
     calcPeriod: 0,
     start: function () {
         if (salaryAmount.value === '') {
-            alert('Ошибка. Поле "Месячный доход" должно быть заполнено');
-            return;
+            document.getElementById('#start').disabled = true;
         }
 
         appData.budget = +salaryAmount.value;
