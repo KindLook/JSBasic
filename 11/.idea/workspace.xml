@@ -60,7 +60,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1618860864454</updated>
-      <workItem from="1618860865735" duration="28676000" />
+      <workItem from="1618860865735" duration="30928000" />
     </task>
     <task id="LOCAL-00001" summary="дз11 урок Практика - не отрабатывает console.log('salaryAmount.value: ', salaryAmount.value);">
       <created>1618987400838</created>
@@ -104,7 +104,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619361310282</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="дз11 Создал метод addIncomeBlock аналогичный addExpensesBlock, округлил вывод дневного бюджета, Число под полоской (input type range) должно меняться в зависимости от позиции range, все считается, в консоли видно, отображение не работает)">
+      <created>1619362783653</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1619362783653</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -128,16 +135,17 @@
     <MESSAGE value="дз11 урок Практика - расчет накопление за период и отображение на странице (отображение не работает)" />
     <MESSAGE value="дз11 урок Практика - расчет дополнительный заработок и отображение на странице (отображение не работает)" />
     <MESSAGE value="дз11 Переписал метод getIncome аналогично getExpenses, отображение на странице (отображение не работает)" />
-    <option name="LAST_COMMIT_MESSAGE" value="дз11 Переписал метод getIncome аналогично getExpenses, отображение на странице (отображение не работает)" />
+    <MESSAGE value="дз11 Создал метод addIncomeBlock аналогичный addExpensesBlock, округлил вывод дневного бюджета, Число под полоской (input type range) должно меняться в зависимости от позиции range, все считается, в консоли видно, отображение не работает)" />
+    <option name="LAST_COMMIT_MESSAGE" value="дз11 Создал метод addIncomeBlock аналогичный addExpensesBlock, округлил вывод дневного бюджета, Число под полоской (input type range) должно меняться в зависимости от позиции range, все считается, в консоли видно, отображение не работает)" />
   </component>
   <component name="WindowStateProjectService">
     <state x="410" y="63" key="FileChooserDialogImpl" timestamp="1618862211065">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="410" y="63" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1618862211065" />
-    <state x="175" y="35" key="Vcs.Push.Dialog.v2" timestamp="1619361317050">
+    <state x="175" y="35" key="Vcs.Push.Dialog.v2" timestamp="1619362798463">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="175" y="35" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1619361317050" />
+    <state x="175" y="35" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1619362798463" />
   </component>
 </project>
