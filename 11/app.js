@@ -19,7 +19,7 @@ let start = document.getElementById('start'),
     additionalExpensesItem = document.querySelector('.additional_expenses-item'),
     periodSelect = document.querySelector('.period-select'),
     targetAmount = document.querySelector('.target-amount'),
-    incomeItem = document.querySelectorAll('.income-items');
+    incomeItems = document.querySelectorAll('.income-items');
 
 
 let appData = {
@@ -45,6 +45,7 @@ let appData = {
         appData.getExpenses();
         appData.getIncome();
         appData.getExpensesMonth();
+        appData.getIncomeMonth();
         appData.getAddExpenses();
         appData.getAddIncome();
         appData.getBudget();
@@ -61,7 +62,8 @@ let appData = {
         additionalExpensesValue.value = appData.addExpenses.join(', ');
         additionalIncomeValue.value = appData.addIncome.join(', ');
         targetMonthValue.value = Math.ceil(appData.getTargetMonth());  //округление в большую сторону
-        incomePeriodValue.value = appData.calcPeriod();
+        incomePeriodValue.value = appData.calcPeriod;
+
     },
 
 
@@ -81,6 +83,16 @@ let appData = {
 
     },
 
+    addIncomeBlock: function (){
+        let cloneIncomeItems = incomeItems[0].cloneNode(true);
+        incomeItems[0].parentNode.insertBefore(cloneIncomeItems, incomeAdd);
+        incomeItems = document.querySelectorAll('.income-items');
+        //если элементов больше 3 то убрать кнопку
+        if (incomeItems.length === 3) {
+            incomeAdd.style.display = 'none';
+        }
+    },
+
     /**
      * соединим все расходы и запишем в объект
      * запускается в start
@@ -90,28 +102,22 @@ let appData = {
             let itemExpenses = item.querySelector('.expenses-title').value;  //получим значение из поля input expenses-title  наименование
             let cashExpenses = item.querySelector('.expenses-amount').value; //получим значение из поля input expenses-amount сумма
             if (itemExpenses !== '' && cashExpenses !== '') {
-                appData.expenses[itemExpenses] = cashExpenses;  //если не пустые строки то записываем в глобальный объект expenses
+                appData.expenses[itemExpenses] = +cashExpenses;  //если не пустые строки то записываем в глобальный объект expenses
             }
 
         });
     },
 
-    getIncome: function (){            //то же что и с расходами getExpenses
-        if (confirm('Есть ли у вас дополнительный заработок?')) {
-            let itemIncome;
-            do {
-                itemIncome = prompt('Какой у вас есть дополнительный заработок?', 'Таксую');
-            }
-            while (itemIncome === null || itemIncome === '');
-            let cashIncome = prompt('Сколько в месяц вы на этом зарабатываете?', 10000);
-            appData.income[itemIncome] = +cashIncome;
-        }
+    getIncome: function (){
+             incomeItems.forEach(function (item){
+                let itemIncome = item.querySelector('.income-title').value;
+                let cashIncome = item.querySelector('.income-amount').value;
+                if (itemIncome !== '' && cashIncome !== '') {
+                    appData.income[itemIncome] = +cashIncome;
+                }
+            });
+        },
 
-        for (let key in appData.income){
-            appData.incomeMonth += +appData.income[key]
-        }
-
-    },
     /**
      * Возможные расходы
      */
@@ -153,6 +159,11 @@ let appData = {
         }
     },
 
+    getIncomeMonth: function () {
+        for (let key in appData.income) {
+            appData.incomeMonth += appData.income[key];
+        }
+    },
     /**
      * Функция возвращает Накопления за месяц (Доходы минус расходы)
      * @returns {number}
@@ -200,6 +211,7 @@ let appData = {
 start.addEventListener('click', appData.start);
 
 expensesAdd.addEventListener('click', appData.addExpensesBlock);
+incomeAdd.addEventListener('click', appData.addIncomeBlock);
 
 
 // if (appData.getTargetMonth() > 0) {
